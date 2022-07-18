@@ -1,0 +1,1200 @@
+=== RUN   TestUnreliable2B
+2022/07/17 00:12:19.487525 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 00:12:19.487674 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 1
+2022/07/17 00:12:19.487722 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 100.9µs
+2022/07/17 00:12:19.488409 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 00:12:19.488490 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 2
+2022/07/17 00:12:19.488520 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 55.5µs
+2022/07/17 00:12:19.488804 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 00:12:19.488881 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 3
+2022/07/17 00:12:19.488908 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 53.4µs
+2022/07/17 00:12:19.489178 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 00:12:19.489223 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 4
+2022/07/17 00:12:19.489246 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 39.4µs
+2022/07/17 00:12:19.489701 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 00:12:19.489746 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 5
+2022/07/17 00:12:19.489769 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 38.5µs
+2022/07/17 00:12:52.926528 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 00:12:52.927220 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 00:12:52.929567 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 00:12:52.929596 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 00:12:52.929620 node.go:198: [info] stop raft store thread, storeID: 3
+--- PASS: TestUnreliable2B (34.06s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	34.077s
+=== RUN   TestUnreliable2B
+2022/07/17 00:18:50.635071 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 00:18:50.635249 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 3
+2022/07/17 00:18:50.635292 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 108.7µs
+2022/07/17 00:18:50.635715 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 00:18:50.635767 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 4
+2022/07/17 00:18:50.635793 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 43.8µs
+2022/07/17 00:18:50.636063 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 00:18:50.636109 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 5
+2022/07/17 00:18:50.636133 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 39.5µs
+2022/07/17 00:18:50.636529 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 00:18:50.636585 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 1
+2022/07/17 00:18:50.636608 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 40.6µs
+2022/07/17 00:18:50.637028 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 00:18:50.637076 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 2
+2022/07/17 00:18:50.637098 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 39.2µs
+2022/07/17 00:19:20.148799 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 00:19:20.152754 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 00:19:20.152804 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 00:19:20.154470 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 00:19:20.154489 node.go:198: [info] stop raft store thread, storeID: 2
+--- PASS: TestUnreliable2B (30.10s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	30.121s
+=== RUN   TestUnreliable2B
+2022/07/17 00:25:49.770453 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 00:25:49.770784 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 00:25:49.770835 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 123.1µs
+2022/07/17 00:25:49.771389 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 00:25:49.771457 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 00:25:49.771486 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 51.3µs
+2022/07/17 00:25:49.771767 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 00:25:49.771824 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 00:25:49.771851 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 45.1µs
+2022/07/17 00:25:49.772216 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 00:25:49.772287 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 00:25:49.772315 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 45.8µs
+2022/07/17 00:25:49.772716 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 00:25:49.772765 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 00:25:49.772791 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 42µs
+2022/07/17 00:26:17.643789 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 00:26:17.646898 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 00:26:17.646971 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 00:26:17.647034 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 00:26:17.647095 node.go:198: [info] stop raft store thread, storeID: 4
+--- PASS: TestUnreliable2B (28.46s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	28.477s
+=== RUN   TestUnreliable2B
+2022/07/17 00:32:57.392434 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 00:32:57.392726 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 00:32:57.392780 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 114.4µs
+2022/07/17 00:32:57.393325 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 00:32:57.393394 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 00:32:57.393436 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 64.9µs
+2022/07/17 00:32:57.393720 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 00:32:57.393768 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 00:32:57.393793 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 42.2µs
+2022/07/17 00:32:57.394182 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 00:32:57.394237 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 00:32:57.394283 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 71.2µs
+2022/07/17 00:32:57.394723 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 00:32:57.394771 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 00:32:57.394806 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 51µs
+2022/07/17 00:33:32.532194 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 00:33:32.536891 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 00:33:32.536936 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 00:33:32.536971 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 00:33:32.537005 node.go:198: [info] stop raft store thread, storeID: 5
+--- PASS: TestUnreliable2B (35.76s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	35.776s
+=== RUN   TestUnreliable2B
+2022/07/17 00:39:37.469502 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 00:39:37.469687 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 >  create peer with ID 2
+2022/07/17 00:39:37.469736 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 138.1µs
+2022/07/17 00:39:37.470366 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 00:39:37.470438 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 >  create peer with ID 3
+2022/07/17 00:39:37.470481 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 67.7µs
+2022/07/17 00:39:37.470759 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 00:39:37.470807 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 >  create peer with ID 4
+2022/07/17 00:39:37.470831 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 40.6µs
+2022/07/17 00:39:37.471521 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 00:39:37.471606 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 >  create peer with ID 5
+2022/07/17 00:39:37.471636 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 57.8µs
+2022/07/17 00:39:37.472078 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 00:39:37.472145 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 >  create peer with ID 1
+2022/07/17 00:39:37.472181 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 55.1µs
+2022/07/17 00:40:07.385348 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 00:40:07.386649 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 00:40:07.388945 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 00:40:07.388968 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 00:40:07.388978 node.go:198: [info] stop raft store thread, storeID: 1
+--- PASS: TestUnreliable2B (30.52s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	30.549s
+=== RUN   TestUnreliable2B
+2022/07/17 00:46:11.320735 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 00:46:11.321016 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 4
+2022/07/17 00:46:11.321055 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 99.1µs
+2022/07/17 00:46:11.321567 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 00:46:11.321623 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 5
+2022/07/17 00:46:11.321652 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 48.4µs
+2022/07/17 00:46:11.321929 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 00:46:11.321999 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 1
+2022/07/17 00:46:11.322034 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 51.5µs
+2022/07/17 00:46:11.322599 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 00:46:11.322651 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 2
+2022/07/17 00:46:11.322676 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 42.2µs
+2022/07/17 00:46:11.323088 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 00:46:11.323140 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 3
+2022/07/17 00:46:11.323165 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 44µs
+2022/07/17 00:46:50.370361 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 00:46:50.374431 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 00:46:50.374464 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 00:46:50.375564 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 00:46:50.375583 node.go:198: [info] stop raft store thread, storeID: 1
+--- PASS: TestUnreliable2B (39.67s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	39.694s
+=== RUN   TestUnreliable2B
+2022/07/17 00:53:13.075901 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 00:53:13.076162 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 1
+2022/07/17 00:53:13.076213 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 108.3µs
+2022/07/17 00:53:13.076643 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 00:53:13.076696 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 2
+2022/07/17 00:53:13.076721 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 43.6µs
+2022/07/17 00:53:13.077006 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 00:53:13.077052 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 3
+2022/07/17 00:53:13.077076 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 40.5µs
+2022/07/17 00:53:13.077479 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 00:53:13.077530 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 4
+2022/07/17 00:53:13.077554 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 43.8µs
+2022/07/17 00:53:13.077964 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 00:53:13.078025 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 5
+2022/07/17 00:53:13.078051 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 44µs
+2022/07/17 00:53:45.269464 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 00:53:45.272036 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 00:53:45.272072 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 00:53:45.272096 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 00:53:45.272107 node.go:198: [info] stop raft store thread, storeID: 4
+--- PASS: TestUnreliable2B (32.80s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	32.825s
+=== RUN   TestUnreliable2B
+2022/07/17 01:00:02.180739 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 01:00:02.181165 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 01:00:02.181209 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 124µs
+2022/07/17 01:00:02.181878 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 01:00:02.181962 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 01:00:02.181991 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 56.3µs
+2022/07/17 01:00:02.182302 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 01:00:02.182361 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 01:00:02.182386 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 45.3µs
+2022/07/17 01:00:02.182663 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 01:00:02.182719 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 01:00:02.182745 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 44.4µs
+2022/07/17 01:00:02.183220 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 01:00:02.183272 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 01:00:02.183296 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 42.5µs
+2022/07/17 01:00:33.807944 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 01:00:33.809567 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 01:00:33.812528 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 01:00:33.812571 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 01:00:33.812605 node.go:198: [info] stop raft store thread, storeID: 1
+--- PASS: TestUnreliable2B (32.25s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	32.280s
+=== RUN   TestUnreliable2B
+2022/07/17 01:06:44.000274 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 01:06:44.000431 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 >  create peer with ID 1
+2022/07/17 01:06:44.000481 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 107.3µs
+2022/07/17 01:06:44.000944 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 01:06:44.001014 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 >  create peer with ID 2
+2022/07/17 01:06:44.001044 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 53.8µs
+2022/07/17 01:06:44.001343 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 01:06:44.001399 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 >  create peer with ID 3
+2022/07/17 01:06:44.001425 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 43.1µs
+2022/07/17 01:06:44.001712 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 01:06:44.001758 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 >  create peer with ID 4
+2022/07/17 01:06:44.001783 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 41.1µs
+2022/07/17 01:06:44.002179 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 01:06:44.002235 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 >  create peer with ID 5
+2022/07/17 01:06:44.002264 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 46.1µs
+2022/07/17 01:07:21.656818 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 01:07:21.659145 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 01:07:21.659996 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 01:07:21.660029 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 01:07:21.660041 node.go:198: [info] stop raft store thread, storeID: 2
+--- PASS: TestUnreliable2B (38.28s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	38.303s
+=== RUN   TestUnreliable2B
+2022/07/17 01:13:01.801128 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 01:13:01.801403 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 1
+2022/07/17 01:13:01.801441 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 99.9µs
+2022/07/17 01:13:01.801943 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 01:13:01.802016 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 2
+2022/07/17 01:13:01.802044 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 52.4µs
+2022/07/17 01:13:01.802322 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 01:13:01.802372 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 3
+2022/07/17 01:13:01.802405 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 49.2µs
+2022/07/17 01:13:01.802768 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 01:13:01.802817 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 4
+2022/07/17 01:13:01.802841 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 40.8µs
+2022/07/17 01:13:01.803285 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 01:13:01.803348 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 5
+2022/07/17 01:13:01.803510 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 179.4µs
+2022/07/17 01:13:28.874125 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 01:13:28.877645 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 01:13:28.878402 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 01:13:28.878428 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 01:13:28.878448 node.go:198: [info] stop raft store thread, storeID: 5
+--- PASS: TestUnreliable2B (27.64s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	27.669s
+=== RUN   TestUnreliable2B
+2022/07/17 01:19:45.407981 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 01:19:45.408255 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 3
+2022/07/17 01:19:45.408296 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 219.2µs
+2022/07/17 01:19:45.408778 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 01:19:45.408863 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 4
+2022/07/17 01:19:45.408891 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 52.8µs
+2022/07/17 01:19:45.409166 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 01:19:45.409214 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 5
+2022/07/17 01:19:45.409248 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 50.9µs
+2022/07/17 01:19:45.409663 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 01:19:45.409719 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 1
+2022/07/17 01:19:45.409747 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 46.5µs
+2022/07/17 01:19:45.410206 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 01:19:45.410255 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 2
+2022/07/17 01:19:45.410280 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 42.2µs
+2022/07/17 01:20:20.782920 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 01:20:20.785419 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 01:20:20.785445 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 01:20:20.785459 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 01:20:20.785473 node.go:198: [info] stop raft store thread, storeID: 2
+--- PASS: TestUnreliable2B (35.99s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	36.010s
+=== RUN   TestUnreliable2B
+2022/07/17 01:26:19.684517 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 01:26:19.684668 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 5
+2022/07/17 01:26:19.684716 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 95.5µs
+2022/07/17 01:26:19.685198 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 01:26:19.685286 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 1
+2022/07/17 01:26:19.685320 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 61.5µs
+2022/07/17 01:26:19.685601 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 01:26:19.685650 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 2
+2022/07/17 01:26:19.685695 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 61µs
+2022/07/17 01:26:19.686133 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 01:26:19.686183 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 3
+2022/07/17 01:26:19.686208 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 41.6µs
+2022/07/17 01:26:19.686656 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 01:26:19.686704 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 4
+2022/07/17 01:26:19.686728 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 40.1µs
+2022/07/17 01:26:58.404663 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 01:26:58.409450 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 01:26:58.409495 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 01:26:58.409530 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 01:26:58.409564 node.go:198: [info] stop raft store thread, storeID: 5
+--- PASS: TestUnreliable2B (39.34s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	39.366s
+=== RUN   TestUnreliable2B
+2022/07/17 01:33:32.940155 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 01:33:32.940455 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 01:33:32.940511 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 135.8µs
+2022/07/17 01:33:32.940981 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 01:33:32.941035 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 01:33:32.941062 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 46µs
+2022/07/17 01:33:32.941357 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 01:33:32.941416 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 01:33:32.941443 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 45.9µs
+2022/07/17 01:33:32.941717 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 01:33:32.941762 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 01:33:32.941787 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 40.9µs
+2022/07/17 01:33:32.942221 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 01:33:32.942267 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 01:33:32.942291 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 40.1µs
+2022/07/17 01:34:04.569798 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 01:34:04.574216 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 01:34:04.574241 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 01:34:04.574658 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 01:34:04.575715 node.go:198: [info] stop raft store thread, storeID: 5
+--- PASS: TestUnreliable2B (32.25s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	32.275s
+=== RUN   TestUnreliable2B
+2022/07/17 01:40:26.604152 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 01:40:26.604372 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 01:40:26.604415 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 129.1µs
+2022/07/17 01:40:26.604967 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 01:40:26.605050 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 01:40:26.605083 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 57.6µs
+2022/07/17 01:40:26.605538 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 01:40:26.605617 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 01:40:26.605654 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 58µs
+2022/07/17 01:40:26.606087 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 01:40:26.606147 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 01:40:26.606183 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 53.9µs
+2022/07/17 01:40:26.606712 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 01:40:26.606781 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 01:40:26.606816 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 55.8µs
+2022/07/17 01:40:55.771953 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 01:40:55.774895 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 01:40:55.774960 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 01:40:55.775024 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 01:40:55.775064 node.go:198: [info] stop raft store thread, storeID: 2
+--- PASS: TestUnreliable2B (29.76s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	29.780s
+=== RUN   TestUnreliable2B
+2022/07/17 01:46:46.678353 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 01:46:46.678642 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 2
+2022/07/17 01:46:46.678684 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 121.1µs
+2022/07/17 01:46:46.679407 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 01:46:46.679519 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 3
+2022/07/17 01:46:46.679556 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 86.2µs
+2022/07/17 01:46:46.679847 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 01:46:46.679896 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 4
+2022/07/17 01:46:46.679920 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 40.6µs
+2022/07/17 01:46:46.680298 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 01:46:46.680367 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 5
+2022/07/17 01:46:46.680394 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 54.9µs
+2022/07/17 01:46:46.680804 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 01:46:46.680852 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 1
+2022/07/17 01:46:46.680876 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 40.2µs
+2022/07/17 01:47:17.768318 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 01:47:17.770907 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 01:47:17.770944 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 01:47:17.770965 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 01:47:17.770984 node.go:198: [info] stop raft store thread, storeID: 5
+--- PASS: TestUnreliable2B (31.70s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	31.724s
+=== RUN   TestUnreliable2B
+2022/07/17 01:53:42.788731 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 01:53:42.788895 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 >  create peer with ID 2
+2022/07/17 01:53:42.788951 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 115.3µs
+2022/07/17 01:53:42.789482 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 01:53:42.789556 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 >  create peer with ID 3
+2022/07/17 01:53:42.789585 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 55µs
+2022/07/17 01:53:42.789863 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 01:53:42.789911 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 >  create peer with ID 4
+2022/07/17 01:53:42.789936 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 40.5µs
+2022/07/17 01:53:42.790413 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 01:53:42.790463 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 >  create peer with ID 5
+2022/07/17 01:53:42.790503 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 56µs
+2022/07/17 01:53:42.790918 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 01:53:42.790968 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 >  create peer with ID 1
+2022/07/17 01:53:42.790992 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 40.6µs
+2022/07/17 01:54:15.025356 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 01:54:15.026491 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 01:54:15.030204 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 01:54:15.030227 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 01:54:15.030239 node.go:198: [info] stop raft store thread, storeID: 1
+--- PASS: TestUnreliable2B (32.86s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	32.878s
+=== RUN   TestUnreliable2B
+2022/07/17 02:00:41.853810 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 02:00:41.853971 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 02:00:41.854028 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 116.8µs
+2022/07/17 02:00:41.854551 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 02:00:41.854671 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 02:00:41.854703 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 69.7µs
+2022/07/17 02:00:41.854991 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 02:00:41.855052 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 02:00:41.855089 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 64.5µs
+2022/07/17 02:00:41.855701 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 02:00:41.855753 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 02:00:41.855778 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 43.1µs
+2022/07/17 02:00:41.856258 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 02:00:41.856309 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 02:00:41.856341 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 49.8µs
+2022/07/17 02:01:13.697126 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 02:01:13.699586 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 02:01:13.699616 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 02:01:13.699629 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 02:01:13.699639 node.go:198: [info] stop raft store thread, storeID: 2
+--- PASS: TestUnreliable2B (32.47s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	32.487s
+=== RUN   TestUnreliable2B
+2022/07/17 02:07:02.259034 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 02:07:02.259199 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 5
+2022/07/17 02:07:02.259236 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 97.5µs
+2022/07/17 02:07:02.259773 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 02:07:02.259854 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 1
+2022/07/17 02:07:02.259885 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 58.2µs
+2022/07/17 02:07:02.260388 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 02:07:02.260452 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 2
+2022/07/17 02:07:02.260486 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 54µs
+2022/07/17 02:07:02.260925 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 02:07:02.260977 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 3
+2022/07/17 02:07:02.261014 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 53.9µs
+2022/07/17 02:07:02.261429 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 02:07:02.261482 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 4
+2022/07/17 02:07:02.261506 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 45.5µs
+2022/07/17 02:07:36.149061 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 02:07:36.152183 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 02:07:36.152237 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 02:07:36.152285 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 02:07:36.152330 node.go:198: [info] stop raft store thread, storeID: 4
+--- PASS: TestUnreliable2B (34.52s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	34.545s
+=== RUN   TestUnreliable2B
+2022/07/17 02:13:51.339466 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 02:13:51.339763 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 >  create peer with ID 5
+2022/07/17 02:13:51.339809 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 119µs
+2022/07/17 02:13:51.340435 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 02:13:51.340517 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 >  create peer with ID 1
+2022/07/17 02:13:51.340555 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 66.5µs
+2022/07/17 02:13:51.341027 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 02:13:51.341111 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 >  create peer with ID 2
+2022/07/17 02:13:51.341140 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 50.8µs
+2022/07/17 02:13:51.341714 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 02:13:51.341821 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 >  create peer with ID 3
+2022/07/17 02:13:51.341854 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 75µs
+2022/07/17 02:13:51.342157 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 02:13:51.342206 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 >  create peer with ID 4
+2022/07/17 02:13:51.342237 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 47.8µs
+2022/07/17 02:14:20.224907 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 02:14:20.227024 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 02:14:20.227089 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 02:14:20.227151 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 02:14:20.227209 node.go:198: [info] stop raft store thread, storeID: 4
+--- PASS: TestUnreliable2B (29.47s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	29.492s
+=== RUN   TestUnreliable2B
+2022/07/17 02:20:00.072127 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 02:20:00.072327 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 02:20:00.072379 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 145.5µs
+2022/07/17 02:20:00.072658 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 02:20:00.072718 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 02:20:00.072745 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 46.5µs
+2022/07/17 02:20:00.073189 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 02:20:00.073247 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 02:20:00.073281 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 53.7µs
+2022/07/17 02:20:00.073546 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 02:20:00.073603 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 02:20:00.073632 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 55µs
+2022/07/17 02:20:00.074120 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 02:20:00.074170 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 02:20:00.074194 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 40.8µs
+2022/07/17 02:20:29.434192 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 02:20:29.436855 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 02:20:29.436889 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 02:20:29.436935 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 02:20:29.436970 node.go:198: [info] stop raft store thread, storeID: 5
+--- PASS: TestUnreliable2B (29.96s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	29.990s
+=== RUN   TestUnreliable2B
+2022/07/17 02:26:41.948679 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 02:26:41.948864 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 >  create peer with ID 2
+2022/07/17 02:26:41.948905 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 113.1µs
+2022/07/17 02:26:41.949339 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 02:26:41.949450 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 >  create peer with ID 3
+2022/07/17 02:26:41.949490 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 79µs
+2022/07/17 02:26:41.950078 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 02:26:41.950143 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 >  create peer with ID 4
+2022/07/17 02:26:41.950168 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 46.9µs
+2022/07/17 02:26:41.950788 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 02:26:41.950852 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 >  create peer with ID 5
+2022/07/17 02:26:41.950879 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 47.9µs
+2022/07/17 02:26:41.951295 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 02:26:41.951370 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 >  create peer with ID 1
+2022/07/17 02:26:41.951399 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 49.1µs
+2022/07/17 02:27:11.943716 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 02:27:11.946677 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 02:27:11.946726 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 02:27:11.946760 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 02:27:11.946771 node.go:198: [info] stop raft store thread, storeID: 1
+--- PASS: TestUnreliable2B (30.58s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	30.612s
+=== RUN   TestUnreliable2B
+2022/07/17 02:33:32.624222 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 02:33:32.624396 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 02:33:32.624436 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 103.3µs
+2022/07/17 02:33:32.625038 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 02:33:32.625117 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 02:33:32.625156 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 64.3µs
+2022/07/17 02:33:32.625571 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 02:33:32.625638 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 02:33:32.625678 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 59.3µs
+2022/07/17 02:33:32.626105 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 02:33:32.626165 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 02:33:32.626195 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 48.2µs
+2022/07/17 02:33:32.626608 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 02:33:32.626659 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 02:33:32.626683 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 40.8µs
+2022/07/17 02:34:04.211313 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 02:34:04.215086 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 02:34:04.215132 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 02:34:04.215151 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 02:34:04.215167 node.go:198: [info] stop raft store thread, storeID: 5
+--- PASS: TestUnreliable2B (32.22s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	32.249s
+=== RUN   TestUnreliable2B
+2022/07/17 02:40:26.579748 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 02:40:26.580007 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 02:40:26.580074 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 185.9µs
+2022/07/17 02:40:26.580725 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 02:40:26.580819 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 02:40:26.580852 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 58.7µs
+2022/07/17 02:40:26.581160 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 02:40:26.581225 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 02:40:26.581274 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 67.3µs
+2022/07/17 02:40:26.581720 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 02:40:26.581787 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 02:40:26.581822 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 53.4µs
+2022/07/17 02:40:26.582261 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 02:40:26.582321 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 02:40:26.582358 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 55µs
+2022/07/17 02:40:58.475760 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 02:40:58.477376 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 02:40:58.479292 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 02:40:58.480302 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 02:40:58.480324 node.go:198: [info] stop raft store thread, storeID: 5
+--- PASS: TestUnreliable2B (32.50s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	32.528s
+=== RUN   TestUnreliable2B
+2022/07/17 02:47:21.081641 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 02:47:21.081908 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 02:47:21.081946 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 96.9µs
+2022/07/17 02:47:21.082463 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 02:47:21.082549 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 02:47:21.082598 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 77.3µs
+2022/07/17 02:47:21.083045 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 02:47:21.083103 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 02:47:21.083128 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 44.6µs
+2022/07/17 02:47:21.083420 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 02:47:21.083470 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 02:47:21.083494 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 41.9µs
+2022/07/17 02:47:21.083935 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 02:47:21.083984 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 02:47:21.084007 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 40.4µs
+2022/07/17 02:47:53.743483 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 02:47:53.744286 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 02:47:53.747935 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 02:47:53.747987 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 02:47:53.748045 node.go:198: [info] stop raft store thread, storeID: 5
+--- PASS: TestUnreliable2B (33.29s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	33.317s
+=== RUN   TestUnreliable2B
+2022/07/17 02:54:23.974418 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 02:54:23.974587 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 1
+2022/07/17 02:54:23.974632 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 94.9µs
+2022/07/17 02:54:23.975236 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 02:54:23.975312 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 2
+2022/07/17 02:54:23.975342 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 56.3µs
+2022/07/17 02:54:23.975634 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 02:54:23.975691 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 3
+2022/07/17 02:54:23.975718 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 44.7µs
+2022/07/17 02:54:23.976110 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 02:54:23.976159 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 4
+2022/07/17 02:54:23.976194 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 51.3µs
+2022/07/17 02:54:23.976622 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 02:54:23.976671 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 5
+2022/07/17 02:54:23.976694 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 40.2µs
+2022/07/17 02:54:54.045901 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 02:54:54.049519 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 02:54:54.050485 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 02:54:54.050508 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 02:54:54.051598 node.go:198: [info] stop raft store thread, storeID: 5
+--- PASS: TestUnreliable2B (30.69s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	30.713s
+=== RUN   TestUnreliable2B
+2022/07/17 03:01:23.045318 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 03:01:23.045541 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 03:01:23.045582 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 151µs
+2022/07/17 03:01:23.046100 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 03:01:23.046184 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 03:01:23.046217 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 59.6µs
+2022/07/17 03:01:23.046511 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 03:01:23.046568 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 03:01:23.046605 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 55.7µs
+2022/07/17 03:01:23.047001 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 03:01:23.047051 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 03:01:23.047101 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 66.3µs
+2022/07/17 03:01:23.047524 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 03:01:23.047584 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 03:01:23.047612 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 45.9µs
+2022/07/17 03:01:52.445798 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 03:01:52.451252 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 03:01:52.451351 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 03:01:52.451371 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 03:01:52.451382 node.go:198: [info] stop raft store thread, storeID: 2
+--- PASS: TestUnreliable2B (30.00s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	30.027s
+=== RUN   TestUnreliable2B
+2022/07/17 03:07:41.054837 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 03:07:41.055016 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 2
+2022/07/17 03:07:41.055058 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 122.3µs
+2022/07/17 03:07:41.056019 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 03:07:41.056078 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 3
+2022/07/17 03:07:41.056105 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 46.3µs
+2022/07/17 03:07:41.058096 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 03:07:41.058168 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 4
+2022/07/17 03:07:41.058195 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 51.9µs
+2022/07/17 03:07:41.066699 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 03:07:41.066757 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 5
+2022/07/17 03:07:41.066782 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 45.6µs
+2022/07/17 03:07:41.075513 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 03:07:41.075585 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 1
+2022/07/17 03:07:41.075617 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 56.1µs
+2022/07/17 03:08:16.393955 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 03:08:16.396547 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 03:08:16.396611 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 03:08:16.396628 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 03:08:16.396636 node.go:198: [info] stop raft store thread, storeID: 2
+--- PASS: TestUnreliable2B (36.44s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	36.461s
+=== RUN   TestUnreliable2B
+2022/07/17 03:14:32.444079 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 03:14:32.444233 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 5
+2022/07/17 03:14:32.444269 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 93.6µs
+2022/07/17 03:14:32.444819 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 03:14:32.444893 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 1
+2022/07/17 03:14:32.444921 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 53.4µs
+2022/07/17 03:14:32.445210 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 03:14:32.445259 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 2
+2022/07/17 03:14:32.445283 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 40.8µs
+2022/07/17 03:14:32.445701 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 03:14:32.445749 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 3
+2022/07/17 03:14:32.445773 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 40.9µs
+2022/07/17 03:14:32.446260 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 03:14:32.446309 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 4
+2022/07/17 03:14:32.446335 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 43.5µs
+2022/07/17 03:15:01.585824 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 03:15:01.588892 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 03:15:01.588917 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 03:15:01.588928 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 03:15:01.588940 node.go:198: [info] stop raft store thread, storeID: 3
+--- PASS: TestUnreliable2B (29.73s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	29.759s
+=== RUN   TestUnreliable2B
+2022/07/17 03:21:01.158363 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 03:21:01.158666 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 >  create peer with ID 3
+2022/07/17 03:21:01.158718 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 139.1µs
+2022/07/17 03:21:01.159196 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 03:21:01.159251 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 >  create peer with ID 4
+2022/07/17 03:21:01.159277 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 44.8µs
+2022/07/17 03:21:01.159547 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 03:21:01.159601 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 >  create peer with ID 5
+2022/07/17 03:21:01.159625 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 39.8µs
+2022/07/17 03:21:01.160100 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 03:21:01.160149 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 >  create peer with ID 1
+2022/07/17 03:21:01.160174 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 41.6µs
+2022/07/17 03:21:01.160635 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 03:21:01.160693 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 >  create peer with ID 2
+2022/07/17 03:21:01.160720 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 45.9µs
+2022/07/17 03:21:38.281992 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 03:21:38.284657 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 03:21:38.286166 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 03:21:38.286186 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 03:21:38.286221 node.go:198: [info] stop raft store thread, storeID: 2
+--- PASS: TestUnreliable2B (37.74s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	37.761s
+=== RUN   TestUnreliable2B
+2022/07/17 03:27:50.500614 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 03:27:50.500898 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 03:27:50.500941 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 103µs
+2022/07/17 03:27:50.501605 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 03:27:50.501690 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 03:27:50.501732 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 69.9µs
+2022/07/17 03:27:50.502033 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 03:27:50.502082 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 03:27:50.502131 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 65.6µs
+2022/07/17 03:27:50.502495 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 03:27:50.502542 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 03:27:50.502566 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 40µs
+2022/07/17 03:27:50.503014 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 03:27:50.503070 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 03:27:50.503097 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 44.8µs
+2022/07/17 03:28:22.570317 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 03:28:22.571007 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 03:28:22.572825 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 03:28:22.572882 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 03:28:22.572902 node.go:198: [info] stop raft store thread, storeID: 5
+--- PASS: TestUnreliable2B (32.70s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	32.725s
+=== RUN   TestUnreliable2B
+2022/07/17 03:34:47.085907 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 03:34:47.086060 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 03:34:47.086097 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 95.6µs
+2022/07/17 03:34:47.086558 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 03:34:47.086644 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 03:34:47.086677 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 59.6µs
+2022/07/17 03:34:47.087128 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 03:34:47.087180 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 03:34:47.087217 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 54.7µs
+2022/07/17 03:34:47.087793 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 03:34:47.087857 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 03:34:47.087884 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 47.2µs
+2022/07/17 03:34:47.088333 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 03:34:47.088409 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 03:34:47.088437 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 72.1µs
+2022/07/17 03:35:19.029336 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 03:35:19.032419 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 03:35:19.032467 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 03:35:19.032485 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 03:35:19.032498 node.go:198: [info] stop raft store thread, storeID: 3
+--- PASS: TestUnreliable2B (32.57s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	32.592s
+=== RUN   TestUnreliable2B
+2022/07/17 03:41:56.661457 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 03:41:56.661711 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 03:41:56.661768 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 155.9µs
+2022/07/17 03:41:56.662303 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 03:41:56.662395 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 03:41:56.662428 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 66.9µs
+2022/07/17 03:41:56.662747 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 03:41:56.662819 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 03:41:56.662846 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 47.5µs
+2022/07/17 03:41:56.663317 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 03:41:56.663377 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 03:41:56.663413 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 53.6µs
+2022/07/17 03:41:56.663892 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 03:41:56.663950 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 03:41:56.663987 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 53.8µs
+2022/07/17 03:42:34.604719 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 03:42:34.607353 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 03:42:34.607376 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 03:42:34.607389 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 03:42:34.607398 node.go:198: [info] stop raft store thread, storeID: 3
+--- PASS: TestUnreliable2B (38.58s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	38.605s
+=== RUN   TestUnreliable2B
+2022/07/17 03:48:36.380533 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 03:48:36.380709 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 03:48:36.380751 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 113.3µs
+2022/07/17 03:48:36.381302 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 03:48:36.381375 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 03:48:36.381406 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 54.2µs
+2022/07/17 03:48:36.381841 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 03:48:36.381896 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 03:48:36.381920 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 42.8µs
+2022/07/17 03:48:36.382423 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 03:48:36.382473 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 03:48:36.382499 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 44µs
+2022/07/17 03:48:36.382965 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 03:48:36.383021 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 03:48:36.383046 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 43.5µs
+2022/07/17 03:49:08.130479 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 03:49:08.133844 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 03:49:08.135044 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 03:49:08.135079 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 03:49:08.135101 node.go:198: [info] stop raft store thread, storeID: 2
+--- PASS: TestUnreliable2B (32.35s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	32.378s
+=== RUN   TestUnreliable2B
+2022/07/17 03:55:23.127429 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 03:55:23.127725 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 3
+2022/07/17 03:55:23.127764 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 123.9µs
+2022/07/17 03:55:23.128346 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 03:55:23.128417 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 4
+2022/07/17 03:55:23.128447 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 53.4µs
+2022/07/17 03:55:23.128725 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 03:55:23.128773 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 5
+2022/07/17 03:55:23.128797 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 40.7µs
+2022/07/17 03:55:23.129375 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 03:55:23.129429 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 1
+2022/07/17 03:55:23.129454 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 43.9µs
+2022/07/17 03:55:23.130081 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 03:55:23.130163 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 2
+2022/07/17 03:55:23.130195 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 68.7µs
+2022/07/17 03:55:58.274003 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 03:55:58.278240 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 03:55:58.278659 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 03:55:58.278703 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 03:55:58.278738 node.go:198: [info] stop raft store thread, storeID: 2
+--- PASS: TestUnreliable2B (35.77s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	35.788s
+=== RUN   TestUnreliable2B
+2022/07/17 04:01:51.020019 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 04:01:51.020178 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 04:01:51.020217 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 98.7µs
+2022/07/17 04:01:51.020751 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 04:01:51.020843 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 04:01:51.020876 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 67.2µs
+2022/07/17 04:01:51.021160 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 04:01:51.021208 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 04:01:51.021231 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 40.5µs
+2022/07/17 04:01:51.021706 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 04:01:51.021753 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 04:01:51.021782 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 43µs
+2022/07/17 04:01:51.022240 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 04:01:51.022288 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 04:01:51.022311 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 40.4µs
+2022/07/17 04:02:21.896987 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 04:02:21.900482 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 04:02:21.900877 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 04:02:21.900905 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 04:02:21.900935 node.go:198: [info] stop raft store thread, storeID: 5
+--- PASS: TestUnreliable2B (31.50s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	31.524s
+=== RUN   TestUnreliable2B
+2022/07/17 04:08:43.444630 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 04:08:43.444804 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 04:08:43.444846 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 113.8µs
+2022/07/17 04:08:43.445725 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 04:08:43.445792 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 04:08:43.445820 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 52.6µs
+2022/07/17 04:08:43.446721 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 04:08:43.446812 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 04:08:43.446865 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 80.3µs
+2022/07/17 04:08:43.447693 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 04:08:43.447751 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 04:08:43.447792 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 59.2µs
+2022/07/17 04:08:43.448653 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 04:08:43.448709 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 04:08:43.448735 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 46.2µs
+2022/07/17 04:09:10.421674 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 04:09:10.422938 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 04:09:10.425463 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 04:09:10.425918 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 04:09:10.425957 node.go:198: [info] stop raft store thread, storeID: 2
+--- PASS: TestUnreliable2B (27.62s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	27.653s
+=== RUN   TestUnreliable2B
+2022/07/17 04:15:00.734470 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 04:15:00.734654 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 1
+2022/07/17 04:15:00.734706 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 133.3µs
+2022/07/17 04:15:00.735119 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 04:15:00.735182 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 2
+2022/07/17 04:15:00.735209 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 47.1µs
+2022/07/17 04:15:00.735812 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 04:15:00.735902 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 3
+2022/07/17 04:15:00.735935 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 71.9µs
+2022/07/17 04:15:00.736695 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 04:15:00.736780 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 4
+2022/07/17 04:15:00.736809 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 58.6µs
+2022/07/17 04:15:00.737137 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 04:15:00.737201 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 5
+2022/07/17 04:15:00.737237 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 59.9µs
+2022/07/17 04:15:29.615515 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 04:15:29.618044 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 04:15:29.618092 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 04:15:29.618133 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 04:15:29.618169 node.go:198: [info] stop raft store thread, storeID: 2
+--- PASS: TestUnreliable2B (29.47s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	29.492s
+=== RUN   TestUnreliable2B
+2022/07/17 04:21:27.507540 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 04:21:27.507745 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 04:21:27.507790 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 131.2µs
+2022/07/17 04:21:27.508327 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 04:21:27.508399 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 04:21:27.508427 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 51.9µs
+2022/07/17 04:21:27.508705 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 04:21:27.508755 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 04:21:27.508793 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 55.2µs
+2022/07/17 04:21:27.509196 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 04:21:27.509253 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 04:21:27.509281 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 53.2µs
+2022/07/17 04:21:27.509723 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 04:21:27.509772 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 04:21:27.509796 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 41.2µs
+2022/07/17 04:21:57.857799 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 04:21:57.860804 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 04:21:57.860835 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 04:21:57.860848 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 04:21:57.860860 node.go:198: [info] stop raft store thread, storeID: 3
+--- PASS: TestUnreliable2B (30.98s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	30.999s
+=== RUN   TestUnreliable2B
+2022/07/17 04:27:51.228590 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 04:27:51.228759 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 04:27:51.228799 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 107.8µs
+2022/07/17 04:27:51.229287 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 04:27:51.229430 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 04:27:51.229488 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 100.6µs
+2022/07/17 04:27:51.229757 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 04:27:51.229806 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 04:27:51.229836 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 46µs
+2022/07/17 04:27:51.230332 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 04:27:51.230384 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 04:27:51.230409 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 41.6µs
+2022/07/17 04:27:51.230867 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 04:27:51.230916 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 04:27:51.230953 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 53.8µs
+2022/07/17 04:28:30.727104 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 04:28:30.730394 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 04:28:30.730471 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 04:28:30.731184 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 04:28:30.732356 node.go:198: [info] stop raft store thread, storeID: 2
+--- PASS: TestUnreliable2B (40.15s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	40.171s
+=== RUN   TestUnreliable2B
+2022/07/17 04:34:39.609729 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 04:34:39.609903 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 >  create peer with ID 2
+2022/07/17 04:34:39.609945 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 112µs
+2022/07/17 04:34:39.610573 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 04:34:39.610649 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 >  create peer with ID 3
+2022/07/17 04:34:39.610679 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 52.9µs
+2022/07/17 04:34:39.611187 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 04:34:39.611243 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 >  create peer with ID 4
+2022/07/17 04:34:39.611268 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 44.1µs
+2022/07/17 04:34:39.611685 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 04:34:39.611737 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 >  create peer with ID 5
+2022/07/17 04:34:39.611763 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 43.4µs
+2022/07/17 04:34:39.612189 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 04:34:39.612239 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 >  create peer with ID 1
+2022/07/17 04:34:39.612263 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 42µs
+2022/07/17 04:35:07.935757 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 04:35:07.936541 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 04:35:07.938772 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 04:35:07.938800 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 04:35:07.938813 node.go:198: [info] stop raft store thread, storeID: 2
+--- PASS: TestUnreliable2B (28.91s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	28.937s
+=== RUN   TestUnreliable2B
+2022/07/17 04:41:29.089375 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 04:41:29.089545 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 04:41:29.089586 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 115.7µs
+2022/07/17 04:41:29.090207 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 04:41:29.090280 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 04:41:29.090311 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 54.6µs
+2022/07/17 04:41:29.090610 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 04:41:29.090656 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 04:41:29.090680 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 39.7µs
+2022/07/17 04:41:29.091148 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 04:41:29.091196 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 04:41:29.091220 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 41.2µs
+2022/07/17 04:41:29.091669 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 04:41:29.091717 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 04:41:29.091741 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 40.6µs
+2022/07/17 04:41:57.776447 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 04:41:57.779784 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 04:41:57.779808 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 04:41:57.779821 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 04:41:57.779832 node.go:198: [info] stop raft store thread, storeID: 5
+--- PASS: TestUnreliable2B (29.27s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	29.303s
+=== RUN   TestUnreliable2B
+2022/07/17 04:48:07.880260 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 04:48:07.880422 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 04:48:07.880459 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 95.1µs
+2022/07/17 04:48:07.881007 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 04:48:07.881081 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 04:48:07.881109 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 53.5µs
+2022/07/17 04:48:07.881379 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 04:48:07.881437 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 04:48:07.881466 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 47µs
+2022/07/17 04:48:07.881863 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 04:48:07.881911 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 04:48:07.881936 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 41.4µs
+2022/07/17 04:48:07.882340 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 04:48:07.882388 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 04:48:07.882413 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 41.5µs
+2022/07/17 04:48:46.194473 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 04:48:46.198470 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 04:48:46.198493 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 04:48:46.198504 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 04:48:46.198515 node.go:198: [info] stop raft store thread, storeID: 5
+--- PASS: TestUnreliable2B (38.92s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	38.943s
+=== RUN   TestUnreliable2B
+2022/07/17 04:54:47.210284 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 04:54:47.210568 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 04:54:47.210609 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 104.3µs
+2022/07/17 04:54:47.211075 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 04:54:47.211131 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 04:54:47.211156 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 45.4µs
+2022/07/17 04:54:47.211460 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 04:54:47.211522 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 04:54:47.211550 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 46.4µs
+2022/07/17 04:54:47.211972 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 04:54:47.212020 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 04:54:47.212044 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 40.7µs
+2022/07/17 04:54:47.212669 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 04:54:47.212732 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 04:54:47.212760 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 47.5µs
+2022/07/17 04:55:15.113845 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 04:55:15.116175 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 04:55:15.116223 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 04:55:15.116293 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 04:55:15.116314 node.go:198: [info] stop raft store thread, storeID: 1
+--- PASS: TestUnreliable2B (28.48s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	28.504s
+=== RUN   TestUnreliable2B
+2022/07/17 05:01:41.195441 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 05:01:41.195592 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 >  create peer with ID 4
+2022/07/17 05:01:41.195628 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 94.2µs
+2022/07/17 05:01:41.196204 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 05:01:41.196272 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 >  create peer with ID 5
+2022/07/17 05:01:41.196308 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 58.6µs
+2022/07/17 05:01:41.196577 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 05:01:41.196623 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 >  create peer with ID 1
+2022/07/17 05:01:41.196646 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 39.8µs
+2022/07/17 05:01:41.197040 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 05:01:41.197088 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 >  create peer with ID 2
+2022/07/17 05:01:41.197111 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 40.6µs
+2022/07/17 05:01:41.197525 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 05:01:41.197573 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 >  create peer with ID 3
+2022/07/17 05:01:41.197596 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 40.3µs
+2022/07/17 05:02:17.056649 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 05:02:17.057405 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 05:02:17.060941 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 05:02:17.061965 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 05:02:17.061984 node.go:198: [info] stop raft store thread, storeID: 3
+--- PASS: TestUnreliable2B (36.50s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	36.518s
+=== RUN   TestUnreliable2B
+2022/07/17 05:08:32.620476 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 05:08:32.620653 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 05:08:32.620694 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 119.2µs
+2022/07/17 05:08:32.622247 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 05:08:32.622355 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 05:08:32.622392 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 71.1µs
+2022/07/17 05:08:32.623254 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 05:08:32.623313 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 05:08:32.623348 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 55.1µs
+2022/07/17 05:08:32.624167 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 05:08:32.624222 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 05:08:32.624247 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 45.3µs
+2022/07/17 05:08:32.625075 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 05:08:32.625130 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 05:08:32.625156 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 45.4µs
+2022/07/17 05:09:08.883730 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 05:09:08.888077 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 05:09:08.888104 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 05:09:08.888115 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 05:09:08.888129 node.go:198: [info] stop raft store thread, storeID: 1
+--- PASS: TestUnreliable2B (36.89s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	36.915s
+=== RUN   TestUnreliable2B
+2022/07/17 05:15:33.025656 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 05:15:33.025907 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 3
+2022/07/17 05:15:33.025961 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 142.9µs
+2022/07/17 05:15:33.026581 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 05:15:33.026670 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 4
+2022/07/17 05:15:33.026703 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 58µs
+2022/07/17 05:15:33.027150 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 05:15:33.027229 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 5
+2022/07/17 05:15:33.027258 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 55.1µs
+2022/07/17 05:15:33.027688 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 05:15:33.027755 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 1
+2022/07/17 05:15:33.027792 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 61.2µs
+2022/07/17 05:15:33.028280 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 05:15:33.028339 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 2
+2022/07/17 05:15:33.028383 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 61.4µs
+2022/07/17 05:16:09.467927 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 05:16:09.471556 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 05:16:09.472270 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 05:16:09.473078 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 05:16:09.473098 node.go:198: [info] stop raft store thread, storeID: 2
+--- PASS: TestUnreliable2B (37.07s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	37.093s
+=== RUN   TestUnreliable2B
+2022/07/17 05:21:41.601992 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 05:21:41.602192 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 1
+2022/07/17 05:21:41.602232 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 143.8µs
+2022/07/17 05:21:41.602724 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 05:21:41.602852 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 2
+2022/07/17 05:21:41.602903 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 92.8µs
+2022/07/17 05:21:41.603167 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 05:21:41.603255 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 3
+2022/07/17 05:21:41.603281 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 44.4µs
+2022/07/17 05:21:41.603709 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 05:21:41.603758 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 4
+2022/07/17 05:21:41.603782 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 41.3µs
+2022/07/17 05:21:41.604193 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 05:21:41.604242 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 5
+2022/07/17 05:21:41.604266 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 40.9µs
+2022/07/17 05:22:18.540330 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 05:22:18.541876 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 05:22:18.544546 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 05:22:18.544937 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 05:22:18.544983 node.go:198: [info] stop raft store thread, storeID: 4
+--- PASS: TestUnreliable2B (37.58s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	37.600s
+=== RUN   TestUnreliable2B
+2022/07/17 05:28:27.919427 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 05:28:27.919606 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 4
+2022/07/17 05:28:27.919657 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 110.6µs
+2022/07/17 05:28:27.920428 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 05:28:27.920540 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 5
+2022/07/17 05:28:27.920590 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 84.8µs
+2022/07/17 05:28:27.920880 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 05:28:27.920931 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 1
+2022/07/17 05:28:27.920955 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 40.5µs
+2022/07/17 05:28:27.921525 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 05:28:27.921619 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 2
+2022/07/17 05:28:27.921647 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 55µs
+2022/07/17 05:28:27.922027 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 05:28:27.922117 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 >  create peer with ID 3
+2022/07/17 05:28:27.922154 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 56.9µs
+2022/07/17 05:29:03.587317 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 05:29:03.588090 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 05:29:03.591192 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 05:29:03.591218 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 05:29:03.591232 node.go:198: [info] stop raft store thread, storeID: 3
+--- PASS: TestUnreliable2B (36.40s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	36.427s
+=== RUN   TestUnreliable2B
+2022/07/17 05:35:35.455610 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 05:35:35.455840 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 5
+2022/07/17 05:35:35.455896 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 132.3µs
+2022/07/17 05:35:35.457274 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 05:35:35.457380 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 1
+2022/07/17 05:35:35.457416 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 78.1µs
+2022/07/17 05:35:35.457740 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 05:35:35.457808 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 2
+2022/07/17 05:35:35.457846 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 60.7µs
+2022/07/17 05:35:35.459232 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 05:35:35.459306 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 3
+2022/07/17 05:35:35.459345 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 62.1µs
+2022/07/17 05:35:35.460222 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 05:35:35.460279 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:1 store_id:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 >  create peer with ID 4
+2022/07/17 05:35:35.460305 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 46.4µs
+2022/07/17 05:36:08.831290 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 05:36:08.834718 node.go:198: [info] stop raft store thread, storeID: 1
+2022/07/17 05:36:08.835892 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 05:36:08.835954 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 05:36:08.836014 node.go:198: [info] stop raft store thread, storeID: 4
+--- PASS: TestUnreliable2B (34.04s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	34.062s
+=== RUN   TestUnreliable2B
+2022/07/17 05:42:33.108497 node.go:193: [info] start raft store node, storeID: 2
+2022/07/17 05:42:33.108815 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 2
+2022/07/17 05:42:33.108858 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 104.6µs
+2022/07/17 05:42:33.109142 node.go:193: [info] start raft store node, storeID: 3
+2022/07/17 05:42:33.109210 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 3
+2022/07/17 05:42:33.109247 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 56.6µs
+2022/07/17 05:42:33.109682 node.go:193: [info] start raft store node, storeID: 4
+2022/07/17 05:42:33.109730 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 4
+2022/07/17 05:42:33.109754 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 41.1µs
+2022/07/17 05:42:33.110203 node.go:193: [info] start raft store node, storeID: 5
+2022/07/17 05:42:33.110255 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 5
+2022/07/17 05:42:33.110279 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 42µs
+2022/07/17 05:42:33.110681 node.go:193: [info] start raft store node, storeID: 1
+2022/07/17 05:42:33.110753 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 1
+2022/07/17 05:42:33.110781 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 53.3µs
+2022/07/17 05:43:10.858120 node.go:198: [info] stop raft store thread, storeID: 2
+2022/07/17 05:43:10.860622 node.go:198: [info] stop raft store thread, storeID: 3
+2022/07/17 05:43:10.860766 node.go:198: [info] stop raft store thread, storeID: 4
+2022/07/17 05:43:10.860786 node.go:198: [info] stop raft store thread, storeID: 5
+2022/07/17 05:43:10.860796 node.go:198: [info] stop raft store thread, storeID: 1
+--- PASS: TestUnreliable2B (38.37s)
+PASS
+ok  	github.com/pingcap-incubator/tinykv/kv/test_raftstore	38.401s

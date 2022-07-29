@@ -1,0 +1,1311 @@
+=== RUN   TestSplitConfChangeSnapshotUnreliableRecoverConcurrentPartition3B
+2022/07/28 19:59:03.428211 node.go:193: [info] start raft store node, storeID: 1
+2022/07/28 19:59:03.428549 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 1
+2022/07/28 19:59:03.428593 raftstore.go:174: [info] start store 1, region_count 1, tombstone_count 0, takes 130.7µs
+2022/07/28 19:59:03.429088 node.go:193: [info] start raft store node, storeID: 2
+2022/07/28 19:59:03.429161 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 2
+2022/07/28 19:59:03.429197 raftstore.go:174: [info] start store 2, region_count 1, tombstone_count 0, takes 57.9µs
+2022/07/28 19:59:03.429466 node.go:193: [info] start raft store node, storeID: 3
+2022/07/28 19:59:03.429512 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 3
+2022/07/28 19:59:03.429538 raftstore.go:174: [info] start store 3, region_count 1, tombstone_count 0, takes 41.5µs
+2022/07/28 19:59:03.429980 node.go:193: [info] start raft store node, storeID: 4
+2022/07/28 19:59:03.430034 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 4
+2022/07/28 19:59:03.430062 raftstore.go:174: [info] start store 4, region_count 1, tombstone_count 0, takes 44.4µs
+2022/07/28 19:59:03.430496 node.go:193: [info] start raft store node, storeID: 5
+2022/07/28 19:59:03.430540 peer.go:41: [info] region id:1 region_epoch:<conf_ver:1 version:1 > peers:<id:2 store_id:2 > peers:<id:3 store_id:3 > peers:<id:4 store_id:4 > peers:<id:5 store_id:5 > peers:<id:1 store_id:1 >  create peer with ID 5
+2022/07/28 19:59:03.430568 raftstore.go:174: [info] start store 5, region_count 1, tombstone_count 0, takes 43.5µs
+2022/07/28 19:59:03.941692 log.go:75: [info] [3 d.regionId: 1 entry.Index: 6 entry.Term: 6 在进行process]
+2022/07/28 19:59:03.943336 log.go:75: [info] [5 d.regionId: 1 entry.Index: 6 entry.Term: 6 在进行process]
+2022/07/28 19:59:03.943430 log.go:75: [info] [4 d.regionId: 1 entry.Index: 6 entry.Term: 6 在进行process]
+2022/07/28 19:59:03.943434 log.go:75: [info] [2 d.regionId: 1 entry.Index: 6 entry.Term: 6 在进行process]
+2022/07/28 19:59:03.943621 log.go:75: [info] [1 d.regionId: 1 entry.Index: 6 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.030102 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: ]
+2022/07/28 19:59:04.030183 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:04.130702 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: ]
+2022/07/28 19:59:04.130804 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:04.230721 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: ]
+2022/07/28 19:59:04.230815 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:04.329990 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: ]
+2022/07/28 19:59:04.330051 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:04.430712 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: ]
+2022/07/28 19:59:04.431446 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:04.431708 cluster.go:326: [info] new put 4 00000000,x 4 0 y
+2022/07/28 19:59:04.431760 cluster.go:326: [info] new put 2 00000000,x 2 0 y
+2022/07/28 19:59:04.431769 cluster.go:326: [info] new put 1 00000000,x 1 0 y
+2022/07/28 19:59:04.431811 cluster.go:326: [info] new put 0 00000000,x 0 0 y
+2022/07/28 19:59:04.431821 cluster.go:326: [info] new put 3 00000000,x 3 0 y
+2022/07/28 19:59:04.432238 peer_msg_handler.go:539: [info] key:4 00000000 startKey: endKey:
+2022/07/28 19:59:04.432278 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 7 proposal  Term: 6]
+2022/07/28 19:59:04.432322 peer_msg_handler.go:539: [info] key:2 00000000 startKey: endKey:
+2022/07/28 19:59:04.432337 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 8 proposal  Term: 6]
+2022/07/28 19:59:04.432362 peer_msg_handler.go:539: [info] key:1 00000000 startKey: endKey:
+2022/07/28 19:59:04.432373 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 9 proposal  Term: 6]
+2022/07/28 19:59:04.432398 peer_msg_handler.go:539: [info] key:0 00000000 startKey: endKey:
+2022/07/28 19:59:04.432408 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 10 proposal  Term: 6]
+2022/07/28 19:59:04.432432 peer_msg_handler.go:539: [info] key:3 00000000 startKey: endKey:
+2022/07/28 19:59:04.432443 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 11 proposal  Term: 6]
+2022/07/28 19:59:04.437866 log.go:75: [info] [3 d.regionId: 1 entry.Index: 7 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.437914 peer_msg_handler.go:539: [info] key:4 00000000 startKey: endKey:
+2022/07/28 19:59:04.437938 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:7 返回了cb, 类型是Put
+2022/07/28 19:59:04.438126 cluster.go:394: [info] new scan request 4 00000000-4 00000001
+2022/07/28 19:59:04.439258 log.go:75: [info] [1 d.regionId: 1 entry.Index: 7 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.439304 peer_msg_handler.go:539: [info] key:4 00000000 startKey: endKey:
+2022/07/28 19:59:04.439354 log.go:75: [info] [4 d.regionId: 1 entry.Index: 7 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.439398 peer_msg_handler.go:539: [info] key:4 00000000 startKey: endKey:
+2022/07/28 19:59:04.439433 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 12 proposal  Term: 6]
+2022/07/28 19:59:04.439470 log.go:75: [info] [2 d.regionId: 1 entry.Index: 7 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.439491 peer_msg_handler.go:539: [info] key:4 00000000 startKey: endKey:
+2022/07/28 19:59:04.439346 log.go:75: [info] [5 d.regionId: 1 entry.Index: 7 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.439581 peer_msg_handler.go:539: [info] key:4 00000000 startKey: endKey:
+2022/07/28 19:59:04.441210 log.go:75: [info] [3 d.regionId: 1 entry.Index: 8 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.441255 peer_msg_handler.go:539: [info] key:2 00000000 startKey: endKey:
+2022/07/28 19:59:04.441275 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:8 返回了cb, 类型是Put
+2022/07/28 19:59:04.441458 cluster.go:394: [info] new scan request 2 00000000-2 00000001
+2022/07/28 19:59:04.442579 log.go:75: [info] [5 d.regionId: 1 entry.Index: 8 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.442639 peer_msg_handler.go:539: [info] key:2 00000000 startKey: endKey:
+2022/07/28 19:59:04.442655 log.go:75: [info] [1 d.regionId: 1 entry.Index: 8 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.442682 peer_msg_handler.go:539: [info] key:2 00000000 startKey: endKey:
+2022/07/28 19:59:04.442648 log.go:75: [info] [2 d.regionId: 1 entry.Index: 8 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.442817 peer_msg_handler.go:539: [info] key:2 00000000 startKey: endKey:
+2022/07/28 19:59:04.443030 log.go:75: [info] [3 d.regionId: 1 entry.Index: 9 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.443063 peer_msg_handler.go:539: [info] key:1 00000000 startKey: endKey:
+2022/07/28 19:59:04.443081 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:9 返回了cb, 类型是Put
+2022/07/28 19:59:04.443147 log.go:75: [info] [4 d.regionId: 1 entry.Index: 8 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.443179 peer_msg_handler.go:539: [info] key:2 00000000 startKey: endKey:
+2022/07/28 19:59:04.443295 cluster.go:326: [info] new put 1 00000001,x 1 1 y
+2022/07/28 19:59:04.444288 log.go:75: [info] [5 d.regionId: 1 entry.Index: 9 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.444326 peer_msg_handler.go:539: [info] key:1 00000000 startKey: endKey:
+2022/07/28 19:59:04.444930 log.go:75: [info] [1 d.regionId: 1 entry.Index: 9 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.444969 peer_msg_handler.go:539: [info] key:1 00000000 startKey: endKey:
+2022/07/28 19:59:04.445594 log.go:75: [info] [2 d.regionId: 1 entry.Index: 9 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.445627 peer_msg_handler.go:539: [info] key:1 00000000 startKey: endKey:
+2022/07/28 19:59:04.445592 log.go:75: [info] [4 d.regionId: 1 entry.Index: 9 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.445766 peer_msg_handler.go:539: [info] key:1 00000000 startKey: endKey:
+2022/07/28 19:59:04.445614 log.go:75: [info] [3 d.regionId: 1 entry.Index: 10 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.445931 peer_msg_handler.go:539: [info] key:0 00000000 startKey: endKey:
+2022/07/28 19:59:04.445949 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:10 返回了cb, 类型是Put
+2022/07/28 19:59:04.446074 cluster.go:326: [info] new put 0 00000001,x 0 1 y
+2022/07/28 19:59:04.446113 log.go:75: [info] [5 d.regionId: 1 entry.Index: 10 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.446137 peer_msg_handler.go:539: [info] key:0 00000000 startKey: endKey:
+2022/07/28 19:59:04.446709 log.go:75: [info] [1 d.regionId: 1 entry.Index: 10 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.446761 peer_msg_handler.go:539: [info] key:0 00000000 startKey: endKey:
+2022/07/28 19:59:04.447399 log.go:75: [info] [4 d.regionId: 1 entry.Index: 10 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.447430 peer_msg_handler.go:539: [info] key:0 00000000 startKey: endKey:
+2022/07/28 19:59:04.447862 log.go:75: [info] [2 d.regionId: 1 entry.Index: 10 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.447900 peer_msg_handler.go:539: [info] key:0 00000000 startKey: endKey:
+2022/07/28 19:59:04.448617 log.go:75: [info] [5 d.regionId: 1 entry.Index: 11 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.448690 peer_msg_handler.go:539: [info] key:3 00000000 startKey: endKey:
+2022/07/28 19:59:04.449079 log.go:75: [info] [1 d.regionId: 1 entry.Index: 11 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.449110 log.go:75: [info] [3 d.regionId: 1 entry.Index: 11 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.449145 peer_msg_handler.go:539: [info] key:3 00000000 startKey: endKey:
+2022/07/28 19:59:04.449172 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:11 返回了cb, 类型是Put
+2022/07/28 19:59:04.449222 log.go:75: [info] [2 d.regionId: 1 entry.Index: 11 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.449118 peer_msg_handler.go:539: [info] key:3 00000000 startKey: endKey:
+2022/07/28 19:59:04.449295 cluster.go:326: [info] new put 3 00000001,x 3 1 y
+2022/07/28 19:59:04.449261 peer_msg_handler.go:539: [info] key:3 00000000 startKey: endKey:
+2022/07/28 19:59:04.449244 log.go:75: [info] [4 d.regionId: 1 entry.Index: 11 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.449473 peer_msg_handler.go:539: [info] key:3 00000000 startKey: endKey:
+2022/07/28 19:59:04.451223 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 13 proposal  Term: 6]
+2022/07/28 19:59:04.451286 peer_msg_handler.go:539: [info] key:1 00000001 startKey: endKey:
+2022/07/28 19:59:04.451303 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 14 proposal  Term: 6]
+2022/07/28 19:59:04.451336 peer_msg_handler.go:539: [info] key:0 00000001 startKey: endKey:
+2022/07/28 19:59:04.451346 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 15 proposal  Term: 6]
+2022/07/28 19:59:04.451363 peer_msg_handler.go:539: [info] key:3 00000001 startKey: endKey:
+2022/07/28 19:59:04.451380 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 16 proposal  Term: 6]
+2022/07/28 19:59:04.452645 log.go:75: [info] [3 d.regionId: 1 entry.Index: 12 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.452686 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:12 返回了cb, 类型是Snap
+2022/07/28 19:59:04.452831 cluster.go:406: [info] new scan 4 00000000-4 00000001
+2022/07/28 19:59:04.452882 cluster.go:394: [info] new scan request 4 00000000-4 00000001
+2022/07/28 19:59:04.453862 log.go:75: [info] [4 d.regionId: 1 entry.Index: 12 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.453975 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 17 proposal  Term: 6]
+2022/07/28 19:59:04.454246 log.go:75: [info] [1 d.regionId: 1 entry.Index: 12 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.454234 log.go:75: [info] [5 d.regionId: 1 entry.Index: 12 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.455303 log.go:75: [info] [2 d.regionId: 1 entry.Index: 12 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.456393 log.go:75: [info] [3 d.regionId: 1 entry.Index: 13 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.456456 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:13 返回了cb, 类型是Snap
+2022/07/28 19:59:04.456677 cluster.go:406: [info] new scan 2 00000000-2 00000001
+2022/07/28 19:59:04.456717 cluster.go:394: [info] new scan request 2 00000000-2 00000001
+2022/07/28 19:59:04.458034 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 18 proposal  Term: 6]
+2022/07/28 19:59:04.458632 log.go:75: [info] [1 d.regionId: 1 entry.Index: 13 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.458671 log.go:75: [info] [5 d.regionId: 1 entry.Index: 13 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.458632 log.go:75: [info] [4 d.regionId: 1 entry.Index: 13 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.458645 log.go:75: [info] [2 d.regionId: 1 entry.Index: 13 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.459693 log.go:75: [info] [3 d.regionId: 1 entry.Index: 14 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.459718 peer_msg_handler.go:539: [info] key:1 00000001 startKey: endKey:
+2022/07/28 19:59:04.459728 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:14 返回了cb, 类型是Put
+2022/07/28 19:59:04.459895 cluster.go:394: [info] new scan request 1 00000000-1 00000002
+2022/07/28 19:59:04.461298 log.go:75: [info] [3 d.regionId: 1 entry.Index: 15 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.461333 peer_msg_handler.go:539: [info] key:0 00000001 startKey: endKey:
+2022/07/28 19:59:04.461352 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:15 返回了cb, 类型是Put
+2022/07/28 19:59:04.461460 cluster.go:394: [info] new scan request 0 00000000-0 00000002
+2022/07/28 19:59:04.461946 log.go:75: [info] [1 d.regionId: 1 entry.Index: 14 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.461980 peer_msg_handler.go:539: [info] key:1 00000001 startKey: endKey:
+2022/07/28 19:59:04.462708 log.go:75: [info] [4 d.regionId: 1 entry.Index: 14 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.462754 peer_msg_handler.go:539: [info] key:1 00000001 startKey: endKey:
+2022/07/28 19:59:04.463443 log.go:75: [info] [2 d.regionId: 1 entry.Index: 14 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.463478 peer_msg_handler.go:539: [info] key:1 00000001 startKey: endKey:
+2022/07/28 19:59:04.463859 log.go:75: [info] [5 d.regionId: 1 entry.Index: 14 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.463882 peer_msg_handler.go:539: [info] key:1 00000001 startKey: endKey:
+2022/07/28 19:59:04.464502 log.go:75: [info] [3 d.regionId: 1 entry.Index: 16 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.464540 peer_msg_handler.go:539: [info] key:3 00000001 startKey: endKey:
+2022/07/28 19:59:04.464556 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:16 返回了cb, 类型是Put
+2022/07/28 19:59:04.464755 cluster.go:394: [info] new scan request 3 00000000-3 00000002
+2022/07/28 19:59:04.464962 log.go:75: [info] [4 d.regionId: 1 entry.Index: 15 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.465005 peer_msg_handler.go:539: [info] key:0 00000001 startKey: endKey:
+2022/07/28 19:59:04.465062 log.go:75: [info] [1 d.regionId: 1 entry.Index: 15 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.465090 peer_msg_handler.go:539: [info] key:0 00000001 startKey: endKey:
+2022/07/28 19:59:04.465619 log.go:75: [info] [2 d.regionId: 1 entry.Index: 15 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.465654 peer_msg_handler.go:539: [info] key:0 00000001 startKey: endKey:
+2022/07/28 19:59:04.466225 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 19 proposal  Term: 6]
+2022/07/28 19:59:04.466280 log.go:75: [info] [5 d.regionId: 1 entry.Index: 15 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.466279 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 20 proposal  Term: 6]
+2022/07/28 19:59:04.466330 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 21 proposal  Term: 6]
+2022/07/28 19:59:04.466305 peer_msg_handler.go:539: [info] key:0 00000001 startKey: endKey:
+2022/07/28 19:59:04.466908 log.go:75: [info] [4 d.regionId: 1 entry.Index: 16 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.466945 peer_msg_handler.go:539: [info] key:3 00000001 startKey: endKey:
+2022/07/28 19:59:04.467446 log.go:75: [info] [1 d.regionId: 1 entry.Index: 16 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.467474 peer_msg_handler.go:539: [info] key:3 00000001 startKey: endKey:
+2022/07/28 19:59:04.468043 log.go:75: [info] [2 d.regionId: 1 entry.Index: 16 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.468069 peer_msg_handler.go:539: [info] key:3 00000001 startKey: endKey:
+2022/07/28 19:59:04.468550 log.go:75: [info] [5 d.regionId: 1 entry.Index: 16 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.468579 peer_msg_handler.go:539: [info] key:3 00000001 startKey: endKey:
+2022/07/28 19:59:04.469268 log.go:75: [info] [3 d.regionId: 1 entry.Index: 17 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.469309 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:17 返回了cb, 类型是Snap
+2022/07/28 19:59:04.469426 cluster.go:406: [info] new scan 4 00000000-4 00000001
+2022/07/28 19:59:04.469481 cluster.go:326: [info] new put 4 00000001,x 4 1 y
+2022/07/28 19:59:04.471039 log.go:75: [info] [3 d.regionId: 1 entry.Index: 18 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.471079 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:18 返回了cb, 类型是Snap
+2022/07/28 19:59:04.471202 cluster.go:406: [info] new scan 2 00000000-2 00000001
+2022/07/28 19:59:04.471233 cluster.go:326: [info] new put 2 00000001,x 2 1 y
+2022/07/28 19:59:04.471906 log.go:75: [info] [1 d.regionId: 1 entry.Index: 17 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.472450 log.go:75: [info] [5 d.regionId: 1 entry.Index: 17 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.472912 log.go:75: [info] [4 d.regionId: 1 entry.Index: 17 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.473621 log.go:75: [info] [2 d.regionId: 1 entry.Index: 17 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.474291 peer_msg_handler.go:539: [info] key:4 00000001 startKey: endKey:
+2022/07/28 19:59:04.474330 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 22 proposal  Term: 6]
+2022/07/28 19:59:04.474368 peer_msg_handler.go:539: [info] key:2 00000001 startKey: endKey:
+2022/07/28 19:59:04.474377 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 23 proposal  Term: 6]
+2022/07/28 19:59:04.474646 log.go:75: [info] [1 d.regionId: 1 entry.Index: 18 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.475123 log.go:75: [info] [5 d.regionId: 1 entry.Index: 18 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.475941 log.go:75: [info] [2 d.regionId: 1 entry.Index: 18 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.476420 log.go:75: [info] [4 d.regionId: 1 entry.Index: 18 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.477662 log.go:75: [info] [3 d.regionId: 1 entry.Index: 19 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.477744 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:19 返回了cb, 类型是Snap
+2022/07/28 19:59:04.477845 cluster.go:406: [info] new scan 1 00000000-1 00000002
+2022/07/28 19:59:04.477879 cluster.go:394: [info] new scan request 1 00000000-1 00000002
+2022/07/28 19:59:04.479257 log.go:75: [info] [1 d.regionId: 1 entry.Index: 19 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.479322 log.go:75: [info] [3 d.regionId: 1 entry.Index: 20 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.479348 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:20 返回了cb, 类型是Snap
+2022/07/28 19:59:04.479478 log.go:75: [info] [2 d.regionId: 1 entry.Index: 19 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.479485 cluster.go:406: [info] new scan 0 00000000-0 00000002
+2022/07/28 19:59:04.479556 cluster.go:326: [info] new put 0 00000002,x 0 2 y
+2022/07/28 19:59:04.479589 log.go:75: [info] [4 d.regionId: 1 entry.Index: 19 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.480626 log.go:75: [info] [1 d.regionId: 1 entry.Index: 20 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.480630 log.go:75: [info] [3 d.regionId: 1 entry.Index: 21 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.480723 log.go:75: [info] [2 d.regionId: 1 entry.Index: 20 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.480725 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:21 返回了cb, 类型是Snap
+2022/07/28 19:59:04.480801 log.go:75: [info] [5 d.regionId: 1 entry.Index: 19 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.480697 log.go:75: [info] [4 d.regionId: 1 entry.Index: 20 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.481003 cluster.go:406: [info] new scan 3 00000000-3 00000002
+2022/07/28 19:59:04.481043 cluster.go:326: [info] new put 3 00000002,x 3 2 y
+2022/07/28 19:59:04.482214 log.go:75: [info] [1 d.regionId: 1 entry.Index: 21 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.482662 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 24 proposal  Term: 6]
+2022/07/28 19:59:04.482712 peer_msg_handler.go:539: [info] key:0 00000002 startKey: endKey:
+2022/07/28 19:59:04.482732 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 25 proposal  Term: 6]
+2022/07/28 19:59:04.482805 peer_msg_handler.go:539: [info] key:3 00000002 startKey: endKey:
+2022/07/28 19:59:04.482828 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 26 proposal  Term: 6]
+2022/07/28 19:59:04.483330 log.go:75: [info] [2 d.regionId: 1 entry.Index: 21 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.483701 log.go:75: [info] [5 d.regionId: 1 entry.Index: 20 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.484419 log.go:75: [info] [4 d.regionId: 1 entry.Index: 21 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.485656 log.go:75: [info] [3 d.regionId: 1 entry.Index: 22 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.485694 peer_msg_handler.go:539: [info] key:4 00000001 startKey: endKey:
+2022/07/28 19:59:04.485721 log.go:75: [info] [5 d.regionId: 1 entry.Index: 21 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.485708 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:22 返回了cb, 类型是Put
+2022/07/28 19:59:04.485851 cluster.go:394: [info] new scan request 4 00000000-4 00000002
+2022/07/28 19:59:04.486850 log.go:75: [info] [4 d.regionId: 1 entry.Index: 22 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.486876 peer_msg_handler.go:539: [info] key:4 00000001 startKey: endKey:
+2022/07/28 19:59:04.487466 log.go:75: [info] [3 d.regionId: 1 entry.Index: 23 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.487496 peer_msg_handler.go:539: [info] key:2 00000001 startKey: endKey:
+2022/07/28 19:59:04.487509 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:23 返回了cb, 类型是Put
+2022/07/28 19:59:04.487613 cluster.go:326: [info] new put 2 00000002,x 2 2 y
+2022/07/28 19:59:04.488583 log.go:75: [info] [1 d.regionId: 1 entry.Index: 22 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.488608 peer_msg_handler.go:539: [info] key:4 00000001 startKey: endKey:
+2022/07/28 19:59:04.489030 log.go:75: [info] [2 d.regionId: 1 entry.Index: 22 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.489059 peer_msg_handler.go:539: [info] key:4 00000001 startKey: endKey:
+2022/07/28 19:59:04.489604 log.go:75: [info] [4 d.regionId: 1 entry.Index: 23 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.489627 peer_msg_handler.go:539: [info] key:2 00000001 startKey: endKey:
+2022/07/28 19:59:04.490014 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 27 proposal  Term: 6]
+2022/07/28 19:59:04.490055 peer_msg_handler.go:539: [info] key:2 00000002 startKey: endKey:
+2022/07/28 19:59:04.490070 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 28 proposal  Term: 6]
+2022/07/28 19:59:04.490669 log.go:75: [info] [5 d.regionId: 1 entry.Index: 22 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.490690 peer_msg_handler.go:539: [info] key:4 00000001 startKey: endKey:
+2022/07/28 19:59:04.491207 log.go:75: [info] [1 d.regionId: 1 entry.Index: 23 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.491238 peer_msg_handler.go:539: [info] key:2 00000001 startKey: endKey:
+2022/07/28 19:59:04.492920 log.go:75: [info] [3 d.regionId: 1 entry.Index: 24 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.492951 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:24 返回了cb, 类型是Snap
+2022/07/28 19:59:04.493031 cluster.go:406: [info] new scan 1 00000000-1 00000002
+2022/07/28 19:59:04.493065 cluster.go:326: [info] new put 1 00000002,x 1 2 y
+2022/07/28 19:59:04.493485 log.go:75: [info] [5 d.regionId: 1 entry.Index: 23 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.493505 peer_msg_handler.go:539: [info] key:2 00000001 startKey: endKey:
+2022/07/28 19:59:04.494479 log.go:75: [info] [2 d.regionId: 1 entry.Index: 23 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.494502 peer_msg_handler.go:539: [info] key:2 00000001 startKey: endKey:
+2022/07/28 19:59:04.495019 log.go:75: [info] [3 d.regionId: 1 entry.Index: 25 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.495043 peer_msg_handler.go:539: [info] key:0 00000002 startKey: endKey:
+2022/07/28 19:59:04.495052 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:25 返回了cb, 类型是Put
+2022/07/28 19:59:04.495115 cluster.go:394: [info] new scan request 0 00000000-0 00000003
+2022/07/28 19:59:04.495553 log.go:75: [info] [4 d.regionId: 1 entry.Index: 24 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.496523 log.go:75: [info] [1 d.regionId: 1 entry.Index: 24 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.497284 log.go:75: [info] [3 d.regionId: 1 entry.Index: 26 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.497306 peer_msg_handler.go:539: [info] key:3 00000002 startKey: endKey:
+2022/07/28 19:59:04.497316 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:26 返回了cb, 类型是Put
+2022/07/28 19:59:04.497501 cluster.go:326: [info] new put 3 00000003,x 3 3 y
+2022/07/28 19:59:04.498265 log.go:75: [info] [4 d.regionId: 1 entry.Index: 25 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.498289 peer_msg_handler.go:539: [info] key:0 00000002 startKey: endKey:
+2022/07/28 19:59:04.498747 log.go:75: [info] [1 d.regionId: 1 entry.Index: 25 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.498776 peer_msg_handler.go:539: [info] key:0 00000002 startKey: endKey:
+2022/07/28 19:59:04.499559 log.go:75: [info] [5 d.regionId: 1 entry.Index: 24 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.499898 peer_msg_handler.go:539: [info] key:1 00000002 startKey: endKey:
+2022/07/28 19:59:04.499943 log.go:75: [info] [4 d.regionId: 1 entry.Index: 26 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.499966 peer_msg_handler.go:539: [info] key:3 00000002 startKey: endKey:
+2022/07/28 19:59:04.499932 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 29 proposal  Term: 6]
+2022/07/28 19:59:04.500030 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 30 proposal  Term: 6]
+2022/07/28 19:59:04.500075 peer_msg_handler.go:539: [info] key:3 00000003 startKey: endKey:
+2022/07/28 19:59:04.500087 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 31 proposal  Term: 6]
+2022/07/28 19:59:04.500641 log.go:75: [info] [2 d.regionId: 1 entry.Index: 24 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.501063 log.go:75: [info] [1 d.regionId: 1 entry.Index: 26 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.501116 peer_msg_handler.go:539: [info] key:3 00000002 startKey: endKey:
+2022/07/28 19:59:04.501818 log.go:75: [info] [5 d.regionId: 1 entry.Index: 25 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.501840 peer_msg_handler.go:539: [info] key:0 00000002 startKey: endKey:
+2022/07/28 19:59:04.502222 log.go:75: [info] [3 d.regionId: 1 entry.Index: 27 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.502247 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:27 返回了cb, 类型是Snap
+2022/07/28 19:59:04.502340 cluster.go:406: [info] new scan 4 00000000-4 00000002
+2022/07/28 19:59:04.502369 cluster.go:394: [info] new scan request 4 00000000-4 00000002
+2022/07/28 19:59:04.503345 log.go:75: [info] [2 d.regionId: 1 entry.Index: 25 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.503375 peer_msg_handler.go:539: [info] key:0 00000002 startKey: endKey:
+2022/07/28 19:59:04.503941 log.go:75: [info] [5 d.regionId: 1 entry.Index: 26 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.503965 peer_msg_handler.go:539: [info] key:3 00000002 startKey: endKey:
+2022/07/28 19:59:04.504389 log.go:75: [info] [3 d.regionId: 1 entry.Index: 28 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.504407 peer_msg_handler.go:539: [info] key:2 00000002 startKey: endKey:
+2022/07/28 19:59:04.504416 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:28 返回了cb, 类型是Put
+2022/07/28 19:59:04.504527 cluster.go:326: [info] new put 2 00000003,x 2 3 y
+2022/07/28 19:59:04.505184 log.go:75: [info] [4 d.regionId: 1 entry.Index: 27 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.505521 log.go:75: [info] [2 d.regionId: 1 entry.Index: 26 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.505542 peer_msg_handler.go:539: [info] key:3 00000002 startKey: endKey:
+2022/07/28 19:59:04.506149 log.go:75: [info] [1 d.regionId: 1 entry.Index: 27 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.507296 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 32 proposal  Term: 6]
+2022/07/28 19:59:04.507344 peer_msg_handler.go:539: [info] key:2 00000003 startKey: endKey:
+2022/07/28 19:59:04.507354 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 33 proposal  Term: 6]
+2022/07/28 19:59:04.507757 log.go:75: [info] [4 d.regionId: 1 entry.Index: 28 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.507787 peer_msg_handler.go:539: [info] key:2 00000002 startKey: endKey:
+2022/07/28 19:59:04.508487 log.go:75: [info] [1 d.regionId: 1 entry.Index: 28 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.508514 peer_msg_handler.go:539: [info] key:2 00000002 startKey: endKey:
+2022/07/28 19:59:04.508581 log.go:75: [info] [5 d.regionId: 1 entry.Index: 27 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.508664 log.go:75: [info] [3 d.regionId: 1 entry.Index: 29 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.508688 peer_msg_handler.go:539: [info] key:1 00000002 startKey: endKey:
+2022/07/28 19:59:04.508701 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:29 返回了cb, 类型是Put
+2022/07/28 19:59:04.508821 cluster.go:326: [info] new put 1 00000003,x 1 3 y
+2022/07/28 19:59:04.510637 log.go:75: [info] [2 d.regionId: 1 entry.Index: 27 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.511233 log.go:75: [info] [3 d.regionId: 1 entry.Index: 30 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.511257 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:30 返回了cb, 类型是Snap
+2022/07/28 19:59:04.511450 cluster.go:406: [info] new scan 0 00000000-0 00000003
+2022/07/28 19:59:04.511490 cluster.go:394: [info] new scan request 0 00000000-0 00000003
+2022/07/28 19:59:04.511688 log.go:75: [info] [5 d.regionId: 1 entry.Index: 28 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.511712 peer_msg_handler.go:539: [info] key:2 00000002 startKey: endKey:
+2022/07/28 19:59:04.512378 log.go:75: [info] [4 d.regionId: 1 entry.Index: 29 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.512400 peer_msg_handler.go:539: [info] key:1 00000002 startKey: endKey:
+2022/07/28 19:59:04.512730 log.go:75: [info] [1 d.regionId: 1 entry.Index: 29 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.512766 peer_msg_handler.go:539: [info] key:1 00000002 startKey: endKey:
+2022/07/28 19:59:04.513380 log.go:75: [info] [2 d.regionId: 1 entry.Index: 28 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.513401 peer_msg_handler.go:539: [info] key:2 00000002 startKey: endKey:
+2022/07/28 19:59:04.513920 log.go:75: [info] [3 d.regionId: 1 entry.Index: 31 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.513960 peer_msg_handler.go:539: [info] key:3 00000003 startKey: endKey:
+2022/07/28 19:59:04.513976 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:31 返回了cb, 类型是Put
+2022/07/28 19:59:04.514082 cluster.go:326: [info] new put 3 00000004,x 3 4 y
+2022/07/28 19:59:04.514989 log.go:75: [info] [4 d.regionId: 1 entry.Index: 30 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.515703 log.go:75: [info] [1 d.regionId: 1 entry.Index: 30 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.516167 peer_msg_handler.go:539: [info] key:1 00000003 startKey: endKey:
+2022/07/28 19:59:04.516202 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 34 proposal  Term: 6]
+2022/07/28 19:59:04.516231 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 35 proposal  Term: 6]
+2022/07/28 19:59:04.516258 peer_msg_handler.go:539: [info] key:3 00000004 startKey: endKey:
+2022/07/28 19:59:04.516265 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 36 proposal  Term: 6]
+2022/07/28 19:59:04.517259 log.go:75: [info] [5 d.regionId: 1 entry.Index: 29 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.517297 peer_msg_handler.go:539: [info] key:1 00000002 startKey: endKey:
+2022/07/28 19:59:04.517725 log.go:75: [info] [1 d.regionId: 1 entry.Index: 31 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.517773 peer_msg_handler.go:539: [info] key:3 00000003 startKey: endKey:
+2022/07/28 19:59:04.518504 log.go:75: [info] [4 d.regionId: 1 entry.Index: 31 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.518532 peer_msg_handler.go:539: [info] key:3 00000003 startKey: endKey:
+2022/07/28 19:59:04.519488 log.go:75: [info] [5 d.regionId: 1 entry.Index: 30 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.520915 log.go:75: [info] [5 d.regionId: 1 entry.Index: 31 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.520953 peer_msg_handler.go:539: [info] key:3 00000003 startKey: endKey:
+2022/07/28 19:59:04.521329 log.go:75: [info] [3 d.regionId: 1 entry.Index: 32 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.521362 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:32 返回了cb, 类型是Snap
+2022/07/28 19:59:04.521476 cluster.go:406: [info] new scan 4 00000000-4 00000002
+2022/07/28 19:59:04.521511 cluster.go:326: [info] new put 4 00000002,x 4 2 y
+2022/07/28 19:59:04.523885 log.go:75: [info] [3 d.regionId: 1 entry.Index: 33 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.523910 peer_msg_handler.go:539: [info] key:2 00000003 startKey: endKey:
+2022/07/28 19:59:04.523920 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:33 返回了cb, 类型是Put
+2022/07/28 19:59:04.524078 cluster.go:394: [info] new scan request 2 00000000-2 00000004
+2022/07/28 19:59:04.525273 peer_msg_handler.go:539: [info] key:4 00000002 startKey: endKey:
+2022/07/28 19:59:04.525328 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 37 proposal  Term: 6]
+2022/07/28 19:59:04.525376 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 38 proposal  Term: 6]
+2022/07/28 19:59:04.526057 log.go:75: [info] [2 d.regionId: 1 entry.Index: 29 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.526677 peer_msg_handler.go:539: [info] key:1 00000002 startKey: endKey:
+2022/07/28 19:59:04.528034 log.go:75: [info] [2 d.regionId: 1 entry.Index: 30 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.529202 log.go:75: [info] [5 d.regionId: 1 entry.Index: 32 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.529255 log.go:75: [info] [4 d.regionId: 1 entry.Index: 32 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.529260 log.go:75: [info] [1 d.regionId: 1 entry.Index: 32 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.529580 log.go:75: [info] [2 d.regionId: 1 entry.Index: 31 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.529602 peer_msg_handler.go:539: [info] key:3 00000003 startKey: endKey:
+2022/07/28 19:59:04.530953 log.go:75: [info] [4 d.regionId: 1 entry.Index: 33 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.531008 peer_msg_handler.go:539: [info] key:2 00000003 startKey: endKey:
+2022/07/28 19:59:04.531579 log.go:75: [info] [5 d.regionId: 1 entry.Index: 33 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.531610 peer_msg_handler.go:539: [info] key:2 00000003 startKey: endKey:
+2022/07/28 19:59:04.532035 log.go:75: [info] [3 d.regionId: 1 entry.Index: 34 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.532069 peer_msg_handler.go:539: [info] key:1 00000003 startKey: endKey:
+2022/07/28 19:59:04.532079 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:34 返回了cb, 类型是Put
+2022/07/28 19:59:04.532175 cluster.go:326: [info] new put 1 00000004,x 1 4 y
+2022/07/28 19:59:04.533085 log.go:75: [info] [1 d.regionId: 1 entry.Index: 33 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.533114 peer_msg_handler.go:539: [info] key:2 00000003 startKey: endKey:
+2022/07/28 19:59:04.534821 log.go:75: [info] [3 d.regionId: 1 entry.Index: 35 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.534861 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:35 返回了cb, 类型是Snap
+2022/07/28 19:59:04.534948 cluster.go:406: [info] new scan 0 00000000-0 00000003
+2022/07/28 19:59:04.534978 cluster.go:326: [info] new put 0 00000003,x 0 3 y
+2022/07/28 19:59:04.535194 log.go:75: [info] [2 d.regionId: 1 entry.Index: 32 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.536283 log.go:75: [info] [4 d.regionId: 1 entry.Index: 34 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.536323 peer_msg_handler.go:539: [info] key:1 00000003 startKey: endKey:
+2022/07/28 19:59:04.536885 log.go:75: [info] [5 d.regionId: 1 entry.Index: 34 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.536906 peer_msg_handler.go:539: [info] key:1 00000003 startKey: endKey:
+2022/07/28 19:59:04.537249 log.go:75: [info] [3 d.regionId: 1 entry.Index: 36 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.537270 peer_msg_handler.go:539: [info] key:3 00000004 startKey: endKey:
+2022/07/28 19:59:04.537280 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:36 返回了cb, 类型是Put
+2022/07/28 19:59:04.537370 cluster.go:326: [info] new put 3 00000005,x 3 5 y
+2022/07/28 19:59:04.537932 log.go:75: [info] [2 d.regionId: 1 entry.Index: 33 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.537958 peer_msg_handler.go:539: [info] key:2 00000003 startKey: endKey:
+2022/07/28 19:59:04.538366 log.go:75: [info] [1 d.regionId: 1 entry.Index: 34 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.538393 peer_msg_handler.go:539: [info] key:1 00000003 startKey: endKey:
+2022/07/28 19:59:04.538944 log.go:75: [info] [5 d.regionId: 1 entry.Index: 35 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.539432 log.go:75: [info] [4 d.regionId: 1 entry.Index: 35 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.540115 log.go:75: [info] [2 d.regionId: 1 entry.Index: 34 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.540154 peer_msg_handler.go:539: [info] key:1 00000003 startKey: endKey:
+2022/07/28 19:59:04.540546 log.go:75: [info] [1 d.regionId: 1 entry.Index: 35 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.541074 log.go:75: [info] [5 d.regionId: 1 entry.Index: 36 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.541110 peer_msg_handler.go:539: [info] key:3 00000004 startKey: endKey:
+2022/07/28 19:59:04.541675 peer_msg_handler.go:539: [info] key:1 00000004 startKey: endKey:
+2022/07/28 19:59:04.541700 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 39 proposal  Term: 6]
+2022/07/28 19:59:04.541755 peer_msg_handler.go:539: [info] key:0 00000003 startKey: endKey:
+2022/07/28 19:59:04.541772 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 40 proposal  Term: 6]
+2022/07/28 19:59:04.541717 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: ]
+2022/07/28 19:59:04.541825 peer_msg_handler.go:539: [info] key:3 00000005 startKey: endKey:
+2022/07/28 19:59:04.541842 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 41 proposal  Term: 6]
+2022/07/28 19:59:04.542202 log.go:75: [info] [2 d.regionId: 1 entry.Index: 35 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.542629 log.go:75: [info] [1 d.regionId: 1 entry.Index: 36 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.542655 peer_msg_handler.go:539: [info] key:3 00000004 startKey: endKey:
+2022/07/28 19:59:04.543736 log.go:75: [info] [3 d.regionId: 1 entry.Index: 37 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.543799 peer_msg_handler.go:539: [info] key:4 00000002 startKey: endKey:
+2022/07/28 19:59:04.543736 log.go:75: [info] [4 d.regionId: 1 entry.Index: 36 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.543832 peer_msg_handler.go:539: [info] key:3 00000004 startKey: endKey:
+2022/07/28 19:59:04.543880 log.go:75: [info] [2 d.regionId: 1 entry.Index: 36 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.543903 peer_msg_handler.go:539: [info] key:3 00000004 startKey: endKey:
+2022/07/28 19:59:04.543821 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:37 返回了cb, 类型是Put
+2022/07/28 19:59:04.543985 cluster.go:326: [info] new put 4 00000003,x 4 3 y
+2022/07/28 19:59:04.545046 log.go:75: [info] [5 d.regionId: 1 entry.Index: 37 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.545085 peer_msg_handler.go:539: [info] key:4 00000002 startKey: endKey:
+2022/07/28 19:59:04.545141 log.go:75: [info] [1 d.regionId: 1 entry.Index: 37 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.545165 peer_msg_handler.go:539: [info] key:4 00000002 startKey: endKey:
+2022/07/28 19:59:04.545148 log.go:75: [info] [3 d.regionId: 1 entry.Index: 38 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.545221 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:38 返回了cb, 类型是Snap
+2022/07/28 19:59:04.545456 cluster.go:406: [info] new scan 2 00000000-2 00000004
+2022/07/28 19:59:04.545494 cluster.go:326: [info] new put 2 00000004,x 2 4 y
+2022/07/28 19:59:04.546225 log.go:75: [info] [5 d.regionId: 1 entry.Index: 38 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.546926 log.go:75: [info] [4 d.regionId: 1 entry.Index: 37 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.546976 peer_msg_handler.go:539: [info] key:4 00000002 startKey: endKey:
+2022/07/28 19:59:04.547142 log.go:75: [info] [1 d.regionId: 1 entry.Index: 38 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.547888 log.go:75: [info] [2 d.regionId: 1 entry.Index: 37 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.547912 peer_msg_handler.go:539: [info] key:4 00000002 startKey: endKey:
+2022/07/28 19:59:04.548356 peer_msg_handler.go:522: [info] [region 1] 3 on split with 3 00000000
+2022/07/28 19:59:04.548399 peer_msg_handler.go:539: [info] key:4 00000003 startKey: endKey:
+2022/07/28 19:59:04.548418 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 42 proposal  Term: 6]
+2022/07/28 19:59:04.548457 peer_msg_handler.go:539: [info] key:2 00000004 startKey: endKey:
+2022/07/28 19:59:04.548480 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 43 proposal  Term: 6]
+2022/07/28 19:59:04.549519 log.go:75: [info] [4 d.regionId: 1 entry.Index: 38 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.549564 log.go:75: [info] [2 d.regionId: 1 entry.Index: 38 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.549609 log.go:75: [info] [3 d.regionId: 1 entry.Index: 39 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.549634 peer_msg_handler.go:539: [info] key:1 00000004 startKey: endKey:
+2022/07/28 19:59:04.549651 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:39 返回了cb, 类型是Put
+2022/07/28 19:59:04.549835 cluster.go:326: [info] new put 1 00000005,x 1 5 y
+2022/07/28 19:59:04.551010 log.go:75: [info] [5 d.regionId: 1 entry.Index: 39 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.551038 peer_msg_handler.go:539: [info] key:1 00000004 startKey: endKey:
+2022/07/28 19:59:04.551142 log.go:75: [info] [3 d.regionId: 1 entry.Index: 40 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.551183 peer_msg_handler.go:539: [info] key:0 00000003 startKey: endKey:
+2022/07/28 19:59:04.551195 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:40 返回了cb, 类型是Put
+2022/07/28 19:59:04.551163 log.go:75: [info] [1 d.regionId: 1 entry.Index: 39 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.551283 peer_msg_handler.go:539: [info] key:1 00000004 startKey: endKey:
+2022/07/28 19:59:04.551307 cluster.go:326: [info] new put 0 00000004,x 0 4 y
+2022/07/28 19:59:04.551991 log.go:75: [info] [5 d.regionId: 1 entry.Index: 40 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.552021 peer_msg_handler.go:539: [info] key:0 00000003 startKey: endKey:
+2022/07/28 19:59:04.552625 log.go:75: [info] [2 d.regionId: 1 entry.Index: 39 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.552645 peer_msg_handler.go:539: [info] key:1 00000004 startKey: endKey:
+2022/07/28 19:59:04.553011 log.go:75: [info] [4 d.regionId: 1 entry.Index: 39 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.553030 peer_msg_handler.go:539: [info] key:1 00000004 startKey: endKey:
+2022/07/28 19:59:04.553724 log.go:75: [info] [3 d.regionId: 1 entry.Index: 41 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.553769 peer_msg_handler.go:539: [info] key:3 00000005 startKey: endKey:
+2022/07/28 19:59:04.553786 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:41 返回了cb, 类型是Put
+2022/07/28 19:59:04.553900 cluster.go:326: [info] new put 3 00000006,x 3 6 y
+2022/07/28 19:59:04.554343 log.go:75: [info] [1 d.regionId: 1 entry.Index: 40 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.554365 peer_msg_handler.go:539: [info] key:0 00000003 startKey: endKey:
+2022/07/28 19:59:04.555596 log.go:75: [info] [2 d.regionId: 1 entry.Index: 40 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.555634 peer_msg_handler.go:539: [info] key:0 00000003 startKey: endKey:
+2022/07/28 19:59:04.556061 peer_msg_handler.go:539: [info] key:3 00000000 startKey: endKey:
+2022/07/28 19:59:04.556086 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在proposeAdminSplit Propose No. 44 proposal  Term: 6]
+2022/07/28 19:59:04.556104 peer_msg_handler.go:539: [info] key:1 00000005 startKey: endKey:
+2022/07/28 19:59:04.556113 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 45 proposal  Term: 6]
+2022/07/28 19:59:04.556141 peer_msg_handler.go:539: [info] key:0 00000004 startKey: endKey:
+2022/07/28 19:59:04.556149 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 46 proposal  Term: 6]
+2022/07/28 19:59:04.556182 peer_msg_handler.go:539: [info] key:3 00000006 startKey: endKey:
+2022/07/28 19:59:04.556189 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 47 proposal  Term: 6]
+2022/07/28 19:59:04.556376 log.go:75: [info] [4 d.regionId: 1 entry.Index: 40 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.556415 peer_msg_handler.go:539: [info] key:0 00000003 startKey: endKey:
+2022/07/28 19:59:04.557054 log.go:75: [info] [1 d.regionId: 1 entry.Index: 41 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.557075 peer_msg_handler.go:539: [info] key:3 00000005 startKey: endKey:
+2022/07/28 19:59:04.557470 log.go:75: [info] [5 d.regionId: 1 entry.Index: 41 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.557496 peer_msg_handler.go:539: [info] key:3 00000005 startKey: endKey:
+2022/07/28 19:59:04.558121 log.go:75: [info] [2 d.regionId: 1 entry.Index: 41 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.558149 peer_msg_handler.go:539: [info] key:3 00000005 startKey: endKey:
+2022/07/28 19:59:04.558549 log.go:75: [info] [4 d.regionId: 1 entry.Index: 41 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.558568 peer_msg_handler.go:539: [info] key:3 00000005 startKey: endKey:
+2022/07/28 19:59:04.559324 log.go:75: [info] [3 d.regionId: 1 entry.Index: 42 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.559352 peer_msg_handler.go:539: [info] key:4 00000003 startKey: endKey:
+2022/07/28 19:59:04.559364 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:42 返回了cb, 类型是Put
+2022/07/28 19:59:04.559556 cluster.go:394: [info] new scan request 4 00000000-4 00000004
+2022/07/28 19:59:04.562248 log.go:75: [info] [1 d.regionId: 1 entry.Index: 42 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.562284 peer_msg_handler.go:539: [info] key:4 00000003 startKey: endKey:
+2022/07/28 19:59:04.563335 log.go:75: [info] [5 d.regionId: 1 entry.Index: 42 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.563366 peer_msg_handler.go:539: [info] key:4 00000003 startKey: endKey:
+2022/07/28 19:59:04.563634 log.go:75: [info] [4 d.regionId: 1 entry.Index: 42 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.563672 peer_msg_handler.go:539: [info] key:4 00000003 startKey: endKey:
+2022/07/28 19:59:04.564382 log.go:75: [info] [2 d.regionId: 1 entry.Index: 42 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.564410 peer_msg_handler.go:539: [info] key:4 00000003 startKey: endKey:
+2022/07/28 19:59:04.564906 log.go:75: [info] [3 d.regionId: 1 entry.Index: 43 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.565049 peer_msg_handler.go:539: [info] key:2 00000004 startKey: endKey:
+2022/07/28 19:59:04.565073 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:43 返回了cb, 类型是Put
+2022/07/28 19:59:04.565266 cluster.go:394: [info] new scan request 2 00000000-2 00000005
+2022/07/28 19:59:04.566433 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 48 proposal  Term: 6]
+2022/07/28 19:59:04.566525 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 49 proposal  Term: 6]
+2022/07/28 19:59:04.567302 log.go:75: [info] [4 d.regionId: 1 entry.Index: 43 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.567841 peer_msg_handler.go:539: [info] key:2 00000004 startKey: endKey:
+2022/07/28 19:59:04.567307 log.go:75: [info] [1 d.regionId: 1 entry.Index: 43 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.567958 log.go:75: [info] [3 d.regionId: 1 entry.Index: 44 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.567965 peer_msg_handler.go:539: [info] key:2 00000004 startKey: endKey:
+2022/07/28 19:59:04.567319 log.go:75: [info] [5 d.regionId: 1 entry.Index: 43 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.568257 peer_msg_handler.go:539: [info] key:2 00000004 startKey: endKey:
+2022/07/28 19:59:04.568065 log.go:75: [info] [1 号region 3 号peer正在处理admin请求,类型是： Split]
+2022/07/28 19:59:04.568352 peer_msg_handler.go:539: [info] key:3 00000000 startKey: endKey:
+2022/07/28 19:59:04.568421 peer.go:41: [info] region id:6 start_key:"3 00000000" region_epoch:<conf_ver:1 version:1 > peers:<id:7 store_id:1 > peers:<id:8 store_id:2 > peers:<id:9 store_id:3 > peers:<id:10 store_id:4 > peers:<id:11 store_id:5 >  create peer with ID 9
+2022/07/28 19:59:04.572082 log.go:75: [info] [4 d.regionId: 1 entry.Index: 44 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.572117 log.go:75: [info] [1 号region 4 号peer正在处理admin请求,类型是： Split]
+2022/07/28 19:59:04.572156 peer_msg_handler.go:539: [info] key:3 00000000 startKey: endKey:
+2022/07/28 19:59:04.572226 peer.go:41: [info] region id:6 start_key:"3 00000000" region_epoch:<conf_ver:1 version:1 > peers:<id:7 store_id:1 > peers:<id:8 store_id:2 > peers:<id:9 store_id:3 > peers:<id:10 store_id:4 > peers:<id:11 store_id:5 >  create peer with ID 10
+2022/07/28 19:59:04.572575 log.go:75: [info] [5 d.regionId: 1 entry.Index: 44 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.572638 log.go:75: [info] [1 号region 5 号peer正在处理admin请求,类型是： Split]
+2022/07/28 19:59:04.572670 peer_msg_handler.go:539: [info] key:3 00000000 startKey: endKey:
+2022/07/28 19:59:04.572711 log.go:75: [info] [2 d.regionId: 1 entry.Index: 43 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.572747 peer_msg_handler.go:539: [info] key:2 00000004 startKey: endKey:
+2022/07/28 19:59:04.572777 peer.go:41: [info] region id:6 start_key:"3 00000000" region_epoch:<conf_ver:1 version:1 > peers:<id:7 store_id:1 > peers:<id:8 store_id:2 > peers:<id:9 store_id:3 > peers:<id:10 store_id:4 > peers:<id:11 store_id:5 >  create peer with ID 11
+2022/07/28 19:59:04.572583 log.go:75: [info] [1 d.regionId: 1 entry.Index: 44 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.572879 log.go:75: [info] [1 号region 1 号peer正在处理admin请求,类型是： Split]
+2022/07/28 19:59:04.572907 peer_msg_handler.go:539: [info] key:3 00000000 startKey: endKey:
+2022/07/28 19:59:04.572972 peer.go:41: [info] region id:6 start_key:"3 00000000" region_epoch:<conf_ver:1 version:1 > peers:<id:7 store_id:1 > peers:<id:8 store_id:2 > peers:<id:9 store_id:3 > peers:<id:10 store_id:4 > peers:<id:11 store_id:5 >  create peer with ID 7
+2022/07/28 19:59:04.573382 peer_msg_handler.go:397: [info] StoreID:3 PeerID:3 oldRegionID:1 StartKey: EndKey:3 00000000
+2022/07/28 19:59:04.573415 peer_msg_handler.go:398: [info] StoreID:3 PeerID:9 newRegionID:6 StartKey:3 00000000 EndKey:
+2022/07/28 19:59:04.573439 peer_msg_handler.go:427: [info] regionID:1 ID: 3 proposals index:44 返回了cb, 类型是Split
+2022/07/28 19:59:04.575961 log.go:75: [info] [3 d.regionId: 1 entry.Index: 45 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.575990 peer_msg_handler.go:539: [info] key:1 00000005 startKey: endKey:3 00000000
+2022/07/28 19:59:04.575999 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:45 返回了cb, 类型是Put
+2022/07/28 19:59:04.576137 cluster.go:326: [info] new put 1 00000006,x 1 6 y
+2022/07/28 19:59:04.576568 peer_msg_handler.go:397: [info] StoreID:4 PeerID:4 oldRegionID:1 StartKey: EndKey:3 00000000
+2022/07/28 19:59:04.576603 peer_msg_handler.go:398: [info] StoreID:4 PeerID:10 newRegionID:6 StartKey:3 00000000 EndKey:
+2022/07/28 19:59:04.576923 peer_msg_handler.go:397: [info] StoreID:5 PeerID:5 oldRegionID:1 StartKey: EndKey:3 00000000
+2022/07/28 19:59:04.576955 peer_msg_handler.go:398: [info] StoreID:5 PeerID:11 newRegionID:6 StartKey:3 00000000 EndKey:
+2022/07/28 19:59:04.577652 peer_msg_handler.go:397: [info] StoreID:1 PeerID:1 oldRegionID:1 StartKey: EndKey:3 00000000
+2022/07/28 19:59:04.577699 peer_msg_handler.go:398: [info] StoreID:1 PeerID:7 newRegionID:6 StartKey:3 00000000 EndKey:
+2022/07/28 19:59:04.578049 log.go:75: [info] [2 d.regionId: 1 entry.Index: 44 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.578073 log.go:75: [info] [1 号region 2 号peer正在处理admin请求,类型是： Split]
+2022/07/28 19:59:04.578090 peer_msg_handler.go:539: [info] key:3 00000000 startKey: endKey:
+2022/07/28 19:59:04.578161 peer.go:41: [info] region id:6 start_key:"3 00000000" region_epoch:<conf_ver:1 version:1 > peers:<id:7 store_id:1 > peers:<id:8 store_id:2 > peers:<id:9 store_id:3 > peers:<id:10 store_id:4 > peers:<id:11 store_id:5 >  create peer with ID 8
+2022/07/28 19:59:04.578708 log.go:75: [info] [3 d.regionId: 1 entry.Index: 46 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.578729 peer_msg_handler.go:539: [info] key:0 00000004 startKey: endKey:3 00000000
+2022/07/28 19:59:04.578768 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:46 返回了cb, 类型是Put
+2022/07/28 19:59:04.578994 cluster.go:326: [info] new put 0 00000005,x 0 5 y
+2022/07/28 19:59:04.579079 log.go:75: [info] [4 d.regionId: 1 entry.Index: 45 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.579110 peer_msg_handler.go:539: [info] key:1 00000005 startKey: endKey:3 00000000
+2022/07/28 19:59:04.579815 log.go:75: [info] [5 d.regionId: 1 entry.Index: 45 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.579846 peer_msg_handler.go:539: [info] key:1 00000005 startKey: endKey:3 00000000
+2022/07/28 19:59:04.580272 log.go:75: [info] [1 d.regionId: 1 entry.Index: 45 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.580292 peer_msg_handler.go:539: [info] key:1 00000005 startKey: endKey:3 00000000
+2022/07/28 19:59:04.581487 log.go:75: [info] [3 d.regionId: 1 entry.Index: 47 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.581523 peer_msg_handler.go:539: [info] key:3 00000006 startKey: endKey:3 00000000
+2022/07/28 19:59:04.581533 peer_msg_handler.go:205: [info] 3 00000006不在startKey:和endKey:3 00000000之间
+2022/07/28 19:59:04.582006 log.go:75: [info] [4 d.regionId: 1 entry.Index: 46 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.582032 peer_msg_handler.go:539: [info] key:0 00000004 startKey: endKey:3 00000000
+2022/07/28 19:59:04.582425 log.go:75: [info] [5 d.regionId: 1 entry.Index: 46 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.582446 peer_msg_handler.go:539: [info] key:0 00000004 startKey: endKey:3 00000000
+2022/07/28 19:59:04.582979 log.go:75: [info] [1 d.regionId: 1 entry.Index: 46 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.583007 peer_msg_handler.go:539: [info] key:0 00000004 startKey: endKey:3 00000000
+2022/07/28 19:59:04.583526 peer_msg_handler.go:397: [info] StoreID:2 PeerID:2 oldRegionID:1 StartKey: EndKey:3 00000000
+2022/07/28 19:59:04.583590 peer_msg_handler.go:398: [info] StoreID:2 PeerID:8 newRegionID:6 StartKey:3 00000000 EndKey:
+2022/07/28 19:59:04.584121 peer_msg_handler.go:539: [info] key:1 00000006 startKey: endKey:3 00000000
+2022/07/28 19:59:04.584144 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 50 proposal  Term: 6]
+2022/07/28 19:59:04.584529 log.go:75: [info] [4 d.regionId: 1 entry.Index: 47 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.584557 peer_msg_handler.go:539: [info] key:3 00000006 startKey: endKey:3 00000000
+2022/07/28 19:59:04.584568 peer_msg_handler.go:205: [info] 3 00000006不在startKey:和endKey:3 00000000之间
+2022/07/28 19:59:04.585139 log.go:75: [info] [5 d.regionId: 1 entry.Index: 47 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.585168 peer_msg_handler.go:539: [info] key:3 00000006 startKey: endKey:3 00000000
+2022/07/28 19:59:04.585175 peer_msg_handler.go:205: [info] 3 00000006不在startKey:和endKey:3 00000000之间
+2022/07/28 19:59:04.585575 log.go:75: [info] [1 d.regionId: 1 entry.Index: 47 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.585598 peer_msg_handler.go:539: [info] key:3 00000006 startKey: endKey:3 00000000
+2022/07/28 19:59:04.585604 peer_msg_handler.go:205: [info] 3 00000006不在startKey:和endKey:3 00000000之间
+2022/07/28 19:59:04.586209 log.go:75: [info] [2 d.regionId: 1 entry.Index: 45 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.586240 peer_msg_handler.go:539: [info] key:1 00000005 startKey: endKey:3 00000000
+2022/07/28 19:59:04.586792 log.go:75: [info] [3 d.regionId: 1 entry.Index: 48 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.586837 peer_msg_handler.go:189: [info] regionID:1 ID: 3未通过regionEpoch检查
+2022/07/28 19:59:04.588797 log.go:75: [info] [2 d.regionId: 1 entry.Index: 46 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.588833 peer_msg_handler.go:539: [info] key:0 00000004 startKey: endKey:3 00000000
+2022/07/28 19:59:04.589353 log.go:75: [info] [3 d.regionId: 1 entry.Index: 49 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.589401 peer_msg_handler.go:189: [info] regionID:1 ID: 3未通过regionEpoch检查
+2022/07/28 19:59:04.589922 log.go:75: [info] [4 d.regionId: 1 entry.Index: 48 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.589973 peer_msg_handler.go:189: [info] regionID:1 ID: 4未通过regionEpoch检查
+2022/07/28 19:59:04.590581 log.go:75: [info] [5 d.regionId: 1 entry.Index: 48 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.590641 peer_msg_handler.go:189: [info] regionID:1 ID: 5未通过regionEpoch检查
+2022/07/28 19:59:04.591032 log.go:75: [info] [1 d.regionId: 1 entry.Index: 48 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.591096 peer_msg_handler.go:189: [info] regionID:1 ID: 1未通过regionEpoch检查
+2022/07/28 19:59:04.591037 log.go:75: [info] [2 d.regionId: 1 entry.Index: 47 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.591198 peer_msg_handler.go:539: [info] key:3 00000006 startKey: endKey:3 00000000
+2022/07/28 19:59:04.591206 peer_msg_handler.go:205: [info] 3 00000006不在startKey:和endKey:3 00000000之间
+2022/07/28 19:59:04.591665 peer_msg_handler.go:539: [info] key:0 00000005 startKey: endKey:3 00000000
+2022/07/28 19:59:04.591695 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 51 proposal  Term: 6]
+2022/07/28 19:59:04.592074 log.go:75: [info] [4 d.regionId: 1 entry.Index: 49 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.592118 peer_msg_handler.go:189: [info] regionID:1 ID: 4未通过regionEpoch检查
+2022/07/28 19:59:04.592762 log.go:75: [info] [5 d.regionId: 1 entry.Index: 49 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.592798 peer_msg_handler.go:189: [info] regionID:1 ID: 5未通过regionEpoch检查
+2022/07/28 19:59:04.593184 log.go:75: [info] [1 d.regionId: 1 entry.Index: 49 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.593221 peer_msg_handler.go:189: [info] regionID:1 ID: 1未通过regionEpoch检查
+2022/07/28 19:59:04.595061 log.go:75: [info] [3 d.regionId: 1 entry.Index: 50 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.595110 peer_msg_handler.go:539: [info] key:1 00000006 startKey: endKey:3 00000000
+2022/07/28 19:59:04.595125 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:50 返回了cb, 类型是Put
+2022/07/28 19:59:04.595367 cluster.go:394: [info] new scan request 1 00000000-1 00000007
+2022/07/28 19:59:04.595606 log.go:75: [info] [2 d.regionId: 1 entry.Index: 48 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.595689 peer_msg_handler.go:189: [info] regionID:1 ID: 2未通过regionEpoch检查
+2022/07/28 19:59:04.596491 log.go:75: [info] [4 d.regionId: 1 entry.Index: 50 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.596515 peer_msg_handler.go:539: [info] key:1 00000006 startKey: endKey:3 00000000
+2022/07/28 19:59:04.597632 log.go:75: [info] [1 d.regionId: 1 entry.Index: 50 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.597666 peer_msg_handler.go:539: [info] key:1 00000006 startKey: endKey:3 00000000
+2022/07/28 19:59:04.598068 log.go:75: [info] [5 d.regionId: 1 entry.Index: 50 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.598100 peer_msg_handler.go:539: [info] key:1 00000006 startKey: endKey:3 00000000
+2022/07/28 19:59:04.598766 log.go:75: [info] [2 d.regionId: 1 entry.Index: 49 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.598830 peer_msg_handler.go:189: [info] regionID:1 ID: 2未通过regionEpoch检查
+2022/07/28 19:59:04.600367 log.go:75: [info] [3 d.regionId: 1 entry.Index: 51 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.600405 peer_msg_handler.go:539: [info] key:0 00000005 startKey: endKey:3 00000000
+2022/07/28 19:59:04.600418 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:51 返回了cb, 类型是Put
+2022/07/28 19:59:04.600520 cluster.go:326: [info] new put 0 00000006,x 0 6 y
+2022/07/28 19:59:04.601649 log.go:75: [info] [1 d.regionId: 1 entry.Index: 51 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.601690 peer_msg_handler.go:539: [info] key:0 00000005 startKey: endKey:3 00000000
+2022/07/28 19:59:04.601701 log.go:75: [info] [4 d.regionId: 1 entry.Index: 51 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.601762 peer_msg_handler.go:539: [info] key:0 00000005 startKey: endKey:3 00000000
+2022/07/28 19:59:04.601853 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 52 proposal  Term: 6]
+2022/07/28 19:59:04.601696 log.go:75: [info] [5 d.regionId: 1 entry.Index: 51 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.601922 peer_msg_handler.go:539: [info] key:0 00000005 startKey: endKey:3 00000000
+2022/07/28 19:59:04.601921 log.go:75: [info] [2 d.regionId: 1 entry.Index: 50 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.601966 peer_msg_handler.go:539: [info] key:1 00000006 startKey: endKey:3 00000000
+2022/07/28 19:59:04.603893 log.go:75: [info] [2 d.regionId: 1 entry.Index: 51 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.603933 peer_msg_handler.go:539: [info] key:0 00000005 startKey: endKey:3 00000000
+2022/07/28 19:59:04.606096 log.go:75: [info] [3 d.regionId: 1 entry.Index: 52 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.606141 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:52 返回了cb, 类型是Snap
+2022/07/28 19:59:04.606256 cluster.go:406: [info] new scan 1 00000000-1 00000007
+2022/07/28 19:59:04.606299 cluster.go:326: [info] new put 1 00000007,x 1 7 y
+2022/07/28 19:59:04.607072 peer_msg_handler.go:539: [info] key:0 00000006 startKey: endKey:3 00000000
+2022/07/28 19:59:04.607110 log.go:75: [info] [5 d.regionId: 1 entry.Index: 52 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.607240 log.go:75: [info] [2 d.regionId: 1 entry.Index: 52 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.607109 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 53 proposal  Term: 6]
+2022/07/28 19:59:04.607339 log.go:75: [info] [1 d.regionId: 1 entry.Index: 52 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.607257 log.go:75: [info] [4 d.regionId: 1 entry.Index: 52 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.608870 peer_msg_handler.go:539: [info] key:1 00000007 startKey: endKey:3 00000000
+2022/07/28 19:59:04.608907 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 54 proposal  Term: 6]
+2022/07/28 19:59:04.611366 log.go:75: [info] [3 d.regionId: 1 entry.Index: 53 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.611416 peer_msg_handler.go:539: [info] key:0 00000006 startKey: endKey:3 00000000
+2022/07/28 19:59:04.611434 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:53 返回了cb, 类型是Put
+2022/07/28 19:59:04.611527 cluster.go:326: [info] new put 0 00000007,x 0 7 y
+2022/07/28 19:59:04.612532 log.go:75: [info] [4 d.regionId: 1 entry.Index: 53 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.612578 peer_msg_handler.go:539: [info] key:0 00000006 startKey: endKey:3 00000000
+2022/07/28 19:59:04.612598 log.go:75: [info] [2 d.regionId: 1 entry.Index: 53 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.612626 peer_msg_handler.go:539: [info] key:0 00000006 startKey: endKey:3 00000000
+2022/07/28 19:59:04.612537 log.go:75: [info] [1 d.regionId: 1 entry.Index: 53 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.612691 peer_msg_handler.go:539: [info] key:0 00000006 startKey: endKey:3 00000000
+2022/07/28 19:59:04.612537 log.go:75: [info] [5 d.regionId: 1 entry.Index: 53 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.612778 peer_msg_handler.go:539: [info] key:0 00000006 startKey: endKey:3 00000000
+2022/07/28 19:59:04.614816 log.go:75: [info] [3 d.regionId: 1 entry.Index: 54 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.614857 peer_msg_handler.go:539: [info] key:1 00000007 startKey: endKey:3 00000000
+2022/07/28 19:59:04.614875 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:54 返回了cb, 类型是Put
+2022/07/28 19:59:04.615057 cluster.go:394: [info] new scan request 1 00000000-1 00000008
+2022/07/28 19:59:04.616191 log.go:75: [info] [1 d.regionId: 1 entry.Index: 54 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.616235 peer_msg_handler.go:539: [info] key:1 00000007 startKey: endKey:3 00000000
+2022/07/28 19:59:04.616381 log.go:75: [info] [5 d.regionId: 1 entry.Index: 54 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.616409 peer_msg_handler.go:539: [info] key:1 00000007 startKey: endKey:3 00000000
+2022/07/28 19:59:04.616178 log.go:75: [info] [2 d.regionId: 1 entry.Index: 54 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.616456 peer_msg_handler.go:539: [info] key:1 00000007 startKey: endKey:3 00000000
+2022/07/28 19:59:04.616408 log.go:75: [info] [4 d.regionId: 1 entry.Index: 54 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.616522 peer_msg_handler.go:539: [info] key:1 00000007 startKey: endKey:3 00000000
+2022/07/28 19:59:04.616426 peer_msg_handler.go:539: [info] key:0 00000007 startKey: endKey:3 00000000
+2022/07/28 19:59:04.616704 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 55 proposal  Term: 6]
+2022/07/28 19:59:04.618292 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 56 proposal  Term: 6]
+2022/07/28 19:59:04.621044 log.go:75: [info] [3 d.regionId: 1 entry.Index: 55 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.621100 peer_msg_handler.go:539: [info] key:0 00000007 startKey: endKey:3 00000000
+2022/07/28 19:59:04.621135 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:55 返回了cb, 类型是Put
+2022/07/28 19:59:04.621240 cluster.go:394: [info] new scan request 0 00000000-0 00000008
+2022/07/28 19:59:04.622214 log.go:75: [info] [1 d.regionId: 1 entry.Index: 55 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.622242 peer_msg_handler.go:539: [info] key:0 00000007 startKey: endKey:3 00000000
+2022/07/28 19:59:04.622680 log.go:75: [info] [4 d.regionId: 1 entry.Index: 55 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.622710 peer_msg_handler.go:539: [info] key:0 00000007 startKey: endKey:3 00000000
+2022/07/28 19:59:04.623654 log.go:75: [info] [2 d.regionId: 1 entry.Index: 55 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.623685 peer_msg_handler.go:539: [info] key:0 00000007 startKey: endKey:3 00000000
+2022/07/28 19:59:04.624483 log.go:75: [info] [5 d.regionId: 1 entry.Index: 55 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.624537 peer_msg_handler.go:539: [info] key:0 00000007 startKey: endKey:3 00000000
+2022/07/28 19:59:04.624811 log.go:75: [info] [3 d.regionId: 1 entry.Index: 56 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.624841 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:56 返回了cb, 类型是Snap
+2022/07/28 19:59:04.624984 cluster.go:406: [info] new scan 1 00000000-1 00000008
+2022/07/28 19:59:04.625102 cluster.go:326: [info] new put 1 00000008,x 1 8 y
+2022/07/28 19:59:04.626382 log.go:75: [info] [2 d.regionId: 1 entry.Index: 56 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.627087 log.go:75: [info] [4 d.regionId: 1 entry.Index: 56 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.627623 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 57 proposal  Term: 6]
+2022/07/28 19:59:04.628115 log.go:75: [info] [1 d.regionId: 1 entry.Index: 56 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.628544 log.go:75: [info] [5 d.regionId: 1 entry.Index: 56 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.630273 peer_msg_handler.go:539: [info] key:1 00000008 startKey: endKey:3 00000000
+2022/07/28 19:59:04.630313 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 58 proposal  Term: 6]
+2022/07/28 19:59:04.630417 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 33203030303030303030]
+2022/07/28 19:59:04.632313 peer_msg_handler.go:522: [info] [region 1] 3 on split with 1 00000003
+2022/07/28 19:59:04.636820 log.go:75: [info] [3 d.regionId: 1 entry.Index: 57 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.636867 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:57 返回了cb, 类型是Snap
+2022/07/28 19:59:04.637063 cluster.go:406: [info] new scan 0 00000000-0 00000008
+2022/07/28 19:59:04.637127 cluster.go:394: [info] new scan request 0 00000000-0 00000008
+2022/07/28 19:59:04.638186 log.go:75: [info] [2 d.regionId: 1 entry.Index: 57 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.638651 peer_msg_handler.go:539: [info] key:1 00000003 startKey: endKey:3 00000000
+2022/07/28 19:59:04.638684 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在proposeAdminSplit Propose No. 59 proposal  Term: 6]
+2022/07/28 19:59:04.638725 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 60 proposal  Term: 6]
+2022/07/28 19:59:04.639246 log.go:75: [info] [4 d.regionId: 1 entry.Index: 57 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.639622 log.go:75: [info] [1 d.regionId: 1 entry.Index: 57 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.641277 log.go:75: [info] [3 d.regionId: 1 entry.Index: 58 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.641313 peer_msg_handler.go:539: [info] key:1 00000008 startKey: endKey:3 00000000
+2022/07/28 19:59:04.641329 peer_msg_handler.go:298: [info] regionID:1 ID: 3 proposals index:58 返回了cb, 类型是Put
+2022/07/28 19:59:04.641533 cluster.go:326: [info] new put 1 00000009,x 1 9 y
+2022/07/28 19:59:04.643454 peer_msg_handler.go:539: [info] key:1 00000009 startKey: endKey:3 00000000
+2022/07/28 19:59:04.643521 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行propose Propose No. 61 proposal  Term: 6]
+2022/07/28 19:59:04.643558 log.go:75: [info] [5 d.regionId: 1 entry.Index: 57 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.646448 log.go:75: [info] [5 d.regionId: 1 entry.Index: 58 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.646493 peer_msg_handler.go:539: [info] key:1 00000008 startKey: endKey:3 00000000
+2022/07/28 19:59:04.646552 log.go:75: [info] [1 d.regionId: 1 entry.Index: 58 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.646582 peer_msg_handler.go:539: [info] key:1 00000008 startKey: endKey:3 00000000
+2022/07/28 19:59:04.646561 log.go:75: [info] [2 d.regionId: 1 entry.Index: 58 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.646683 peer_msg_handler.go:539: [info] key:1 00000008 startKey: endKey:3 00000000
+2022/07/28 19:59:04.646588 log.go:75: [info] [4 d.regionId: 1 entry.Index: 58 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.646862 peer_msg_handler.go:539: [info] key:1 00000008 startKey: endKey:3 00000000
+2022/07/28 19:59:04.648552 log.go:75: [info] [3 d.regionId: 1 entry.Index: 59 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.648587 log.go:75: [info] [1 号region 3 号peer正在处理admin请求,类型是： Split]
+2022/07/28 19:59:04.648616 peer_msg_handler.go:539: [info] key:1 00000003 startKey: endKey:3 00000000
+2022/07/28 19:59:04.648685 peer.go:41: [info] region id:12 start_key:"1 00000003" end_key:"3 00000000" region_epoch:<conf_ver:1 version:1 > peers:<id:13 store_id:1 > peers:<id:14 store_id:2 > peers:<id:15 store_id:3 > peers:<id:16 store_id:4 > peers:<id:17 store_id:5 >  create peer with ID 15
+2022/07/28 19:59:04.651819 log.go:75: [info] [2 d.regionId: 1 entry.Index: 59 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.651850 log.go:75: [info] [1 号region 2 号peer正在处理admin请求,类型是： Split]
+2022/07/28 19:59:04.651868 peer_msg_handler.go:539: [info] key:1 00000003 startKey: endKey:3 00000000
+2022/07/28 19:59:04.651930 peer.go:41: [info] region id:12 start_key:"1 00000003" end_key:"3 00000000" region_epoch:<conf_ver:1 version:1 > peers:<id:13 store_id:1 > peers:<id:14 store_id:2 > peers:<id:15 store_id:3 > peers:<id:16 store_id:4 > peers:<id:17 store_id:5 >  create peer with ID 14
+2022/07/28 19:59:04.652546 log.go:75: [info] [4 d.regionId: 1 entry.Index: 59 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.652576 log.go:75: [info] [1 号region 4 号peer正在处理admin请求,类型是： Split]
+2022/07/28 19:59:04.652603 peer_msg_handler.go:539: [info] key:1 00000003 startKey: endKey:3 00000000
+2022/07/28 19:59:04.652645 peer.go:41: [info] region id:12 start_key:"1 00000003" end_key:"3 00000000" region_epoch:<conf_ver:1 version:1 > peers:<id:13 store_id:1 > peers:<id:14 store_id:2 > peers:<id:15 store_id:3 > peers:<id:16 store_id:4 > peers:<id:17 store_id:5 >  create peer with ID 16
+2022/07/28 19:59:04.652955 log.go:75: [info] [5 d.regionId: 1 entry.Index: 59 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.652984 log.go:75: [info] [1 号region 5 号peer正在处理admin请求,类型是： Split]
+2022/07/28 19:59:04.653000 peer_msg_handler.go:539: [info] key:1 00000003 startKey: endKey:3 00000000
+2022/07/28 19:59:04.653026 peer.go:41: [info] region id:12 start_key:"1 00000003" end_key:"3 00000000" region_epoch:<conf_ver:1 version:1 > peers:<id:13 store_id:1 > peers:<id:14 store_id:2 > peers:<id:15 store_id:3 > peers:<id:16 store_id:4 > peers:<id:17 store_id:5 >  create peer with ID 17
+2022/07/28 19:59:04.653568 log.go:75: [info] [1 d.regionId: 1 entry.Index: 59 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.653596 log.go:75: [info] [1 号region 1 号peer正在处理admin请求,类型是： Split]
+2022/07/28 19:59:04.653612 peer_msg_handler.go:539: [info] key:1 00000003 startKey: endKey:3 00000000
+2022/07/28 19:59:04.653637 peer.go:41: [info] region id:12 start_key:"1 00000003" end_key:"3 00000000" region_epoch:<conf_ver:1 version:1 > peers:<id:13 store_id:1 > peers:<id:14 store_id:2 > peers:<id:15 store_id:3 > peers:<id:16 store_id:4 > peers:<id:17 store_id:5 >  create peer with ID 13
+2022/07/28 19:59:04.654084 peer_msg_handler.go:397: [info] StoreID:3 PeerID:3 oldRegionID:1 StartKey: EndKey:1 00000003
+2022/07/28 19:59:04.654142 peer_msg_handler.go:398: [info] StoreID:3 PeerID:15 newRegionID:12 StartKey:1 00000003 EndKey:3 00000000
+2022/07/28 19:59:04.654183 peer_msg_handler.go:427: [info] regionID:1 ID: 3 proposals index:59 返回了cb, 类型是Split
+2022/07/28 19:59:04.656813 log.go:75: [info] [3 d.regionId: 1 entry.Index: 60 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.656883 peer_msg_handler.go:189: [info] regionID:1 ID: 3未通过regionEpoch检查
+2022/07/28 19:59:04.657303 peer_msg_handler.go:397: [info] StoreID:2 PeerID:2 oldRegionID:1 StartKey: EndKey:1 00000003
+2022/07/28 19:59:04.657365 peer_msg_handler.go:398: [info] StoreID:2 PeerID:14 newRegionID:12 StartKey:1 00000003 EndKey:3 00000000
+2022/07/28 19:59:04.657885 peer_msg_handler.go:397: [info] StoreID:4 PeerID:4 oldRegionID:1 StartKey: EndKey:1 00000003
+2022/07/28 19:59:04.657921 peer_msg_handler.go:398: [info] StoreID:4 PeerID:16 newRegionID:12 StartKey:1 00000003 EndKey:3 00000000
+2022/07/28 19:59:04.658415 peer_msg_handler.go:397: [info] StoreID:5 PeerID:5 oldRegionID:1 StartKey: EndKey:1 00000003
+2022/07/28 19:59:04.658451 peer_msg_handler.go:398: [info] StoreID:5 PeerID:17 newRegionID:12 StartKey:1 00000003 EndKey:3 00000000
+2022/07/28 19:59:04.659133 peer_msg_handler.go:397: [info] StoreID:1 PeerID:1 oldRegionID:1 StartKey: EndKey:1 00000003
+2022/07/28 19:59:04.659195 peer_msg_handler.go:398: [info] StoreID:1 PeerID:13 newRegionID:12 StartKey:1 00000003 EndKey:3 00000000
+2022/07/28 19:59:04.659604 log.go:75: [info] [2 d.regionId: 1 entry.Index: 60 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.659639 log.go:75: [info] [4 d.regionId: 1 entry.Index: 60 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.659689 peer_msg_handler.go:189: [info] regionID:1 ID: 4未通过regionEpoch检查
+2022/07/28 19:59:04.659647 log.go:75: [info] [5 d.regionId: 1 entry.Index: 60 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.659771 peer_msg_handler.go:189: [info] regionID:1 ID: 5未通过regionEpoch检查
+2022/07/28 19:59:04.659660 peer_msg_handler.go:189: [info] regionID:1 ID: 2未通过regionEpoch检查
+2022/07/28 19:59:04.660630 log.go:75: [info] [1 d.regionId: 1 entry.Index: 60 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.660662 peer_msg_handler.go:189: [info] regionID:1 ID: 1未通过regionEpoch检查
+2022/07/28 19:59:04.662238 log.go:75: [info] [3 d.regionId: 1 entry.Index: 61 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.662270 peer_msg_handler.go:539: [info] key:1 00000009 startKey: endKey:1 00000003
+2022/07/28 19:59:04.662277 peer_msg_handler.go:205: [info] 1 00000009不在startKey:和endKey:1 00000003之间
+2022/07/28 19:59:04.663498 log.go:75: [info] [1 d.regionId: 1 entry.Index: 61 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.663541 peer_msg_handler.go:539: [info] key:1 00000009 startKey: endKey:1 00000003
+2022/07/28 19:59:04.663569 peer_msg_handler.go:205: [info] 1 00000009不在startKey:和endKey:1 00000003之间
+2022/07/28 19:59:04.663539 log.go:75: [info] [2 d.regionId: 1 entry.Index: 61 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.663681 peer_msg_handler.go:539: [info] key:1 00000009 startKey: endKey:1 00000003
+2022/07/28 19:59:04.663698 peer_msg_handler.go:205: [info] 1 00000009不在startKey:和endKey:1 00000003之间
+2022/07/28 19:59:04.663526 log.go:75: [info] [4 d.regionId: 1 entry.Index: 61 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.663826 peer_msg_handler.go:539: [info] key:1 00000009 startKey: endKey:1 00000003
+2022/07/28 19:59:04.663564 log.go:75: [info] [5 d.regionId: 1 entry.Index: 61 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.663889 peer_msg_handler.go:539: [info] key:1 00000009 startKey: endKey:1 00000003
+2022/07/28 19:59:04.663899 peer_msg_handler.go:205: [info] 1 00000009不在startKey:和endKey:1 00000003之间
+2022/07/28 19:59:04.663835 peer_msg_handler.go:205: [info] 1 00000009不在startKey:和endKey:1 00000003之间
+2022/07/28 19:59:04.729906 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:04.729953 split_checker.go:85: [info] r.checker.currentSize:187
+2022/07/28 19:59:04.729963 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:04.731707 test_test.go:104: [info] partition: [2 3 4 5], [1]
+2022/07/28 19:59:04.829909 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:0,RegionSplitSize:200
+2022/07/28 19:59:04.929894 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:0,RegionSplitSize:200
+2022/07/28 19:59:04.931673 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行proposeConfChange Propose No. 62 proposal  Term: 6]
+2022/07/28 19:59:04.935417 log.go:75: [info] [3 d.regionId: 1 entry.Index: 62 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.935478 peer_msg_handler.go:166: [info] regionID:1 ID: 3 proposals index:62 返回了cb, 类型是ChangePeer
+2022/07/28 19:59:04.937073 log.go:75: [info] [2 d.regionId: 1 entry.Index: 62 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.937182 log.go:75: [info] [4 d.regionId: 1 entry.Index: 62 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.937214 peer_msg_handler.go:970: [info] [region 1] 4 starts destroy
+2022/07/28 19:59:04.937225 peer.go:203: [info] [region 1] 4 begin to destroy
+2022/07/28 19:59:04.937263 peer_storage.go:298: [info] [region 1] clear peer 1 meta key 1 apply key 1 raft key and 57 raft logs, takes 24.9µs
+2022/07/28 19:59:04.938331 log.go:75: [info] [5 d.regionId: 1 entry.Index: 62 entry.Term: 6 在进行process]
+2022/07/28 19:59:04.948826 peer.go:231: [info] [region 1] 4 destroy itself, takes 11.6ms
+2022/07/28 19:59:04.957334 region_task.go:138: [info] succeed in deleting data in range. [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:05.029892 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:0,RegionSplitSize:200
+2022/07/28 19:59:05.086857 peer_msg_handler.go:539: [info] key:3 00000006 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.086921 log.go:75: [info] [d.regionId: 6 d.peer.PeerId(): 11 在进行propose Propose No. 7 proposal  Term: 6]
+2022/07/28 19:59:05.088074 log.go:75: [info] [11 d.regionId: 6 entry.Index: 6 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.089007 log.go:75: [info] [8 d.regionId: 6 entry.Index: 6 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.089039 log.go:75: [info] [9 d.regionId: 6 entry.Index: 6 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.089172 log.go:75: [info] [10 d.regionId: 6 entry.Index: 6 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.092338 log.go:75: [info] [11 d.regionId: 6 entry.Index: 7 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.092368 peer_msg_handler.go:539: [info] key:3 00000006 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.092381 peer_msg_handler.go:298: [info] regionID:6 ID: 11 proposals index:7 返回了cb, 类型是Put
+2022/07/28 19:59:05.092482 cluster.go:394: [info] new scan request 3 00000000-3 00000007
+2022/07/28 19:59:05.093358 log.go:75: [info] [8 d.regionId: 6 entry.Index: 7 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.093380 peer_msg_handler.go:539: [info] key:3 00000006 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.093844 log.go:75: [info] [9 d.regionId: 6 entry.Index: 7 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.093867 peer_msg_handler.go:539: [info] key:3 00000006 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.094401 log.go:75: [info] [10 d.regionId: 6 entry.Index: 7 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.094424 peer_msg_handler.go:539: [info] key:3 00000006 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.095480 log.go:75: [info] [d.regionId: 6 d.peer.PeerId(): 11 在进行propose Propose No. 8 proposal  Term: 6]
+2022/07/28 19:59:05.099668 log.go:75: [info] [11 d.regionId: 6 entry.Index: 8 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.099711 peer_msg_handler.go:298: [info] regionID:6 ID: 11 proposals index:8 返回了cb, 类型是Snap
+2022/07/28 19:59:05.099936 cluster.go:406: [info] new scan 3 00000000-3 00000007
+2022/07/28 19:59:05.099978 cluster.go:326: [info] new put 3 00000007,x 3 7 y
+2022/07/28 19:59:05.100580 log.go:75: [info] [8 d.regionId: 6 entry.Index: 8 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.100699 log.go:75: [info] [9 d.regionId: 6 entry.Index: 8 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.100756 log.go:75: [info] [10 d.regionId: 6 entry.Index: 8 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.101646 peer_msg_handler.go:539: [info] key:3 00000007 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.101669 log.go:75: [info] [d.regionId: 6 d.peer.PeerId(): 11 在进行propose Propose No. 9 proposal  Term: 6]
+2022/07/28 19:59:05.108779 log.go:75: [info] [11 d.regionId: 6 entry.Index: 9 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.108818 peer_msg_handler.go:539: [info] key:3 00000007 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.108831 peer_msg_handler.go:298: [info] regionID:6 ID: 11 proposals index:9 返回了cb, 类型是Put
+2022/07/28 19:59:05.108927 cluster.go:326: [info] new put 3 00000008,x 3 8 y
+2022/07/28 19:59:05.109842 peer_msg_handler.go:539: [info] key:3 00000008 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.109864 log.go:75: [info] [10 d.regionId: 6 entry.Index: 9 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.109894 peer_msg_handler.go:539: [info] key:3 00000007 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.109875 log.go:75: [info] [d.regionId: 6 d.peer.PeerId(): 11 在进行propose Propose No. 10 proposal  Term: 6]
+2022/07/28 19:59:05.109848 log.go:75: [info] [9 d.regionId: 6 entry.Index: 9 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.110058 peer_msg_handler.go:539: [info] key:3 00000007 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.112298 log.go:75: [info] [8 d.regionId: 6 entry.Index: 9 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.112320 peer_msg_handler.go:539: [info] key:3 00000007 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.113412 log.go:75: [info] [11 d.regionId: 6 entry.Index: 10 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.113440 peer_msg_handler.go:539: [info] key:3 00000008 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.113454 peer_msg_handler.go:298: [info] regionID:6 ID: 11 proposals index:10 返回了cb, 类型是Put
+2022/07/28 19:59:05.113569 cluster.go:394: [info] new scan request 3 00000000-3 00000009
+2022/07/28 19:59:05.114333 log.go:75: [info] [9 d.regionId: 6 entry.Index: 10 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.114361 peer_msg_handler.go:539: [info] key:3 00000008 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.114334 log.go:75: [info] [8 d.regionId: 6 entry.Index: 10 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.114417 log.go:75: [info] [10 d.regionId: 6 entry.Index: 10 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.114443 peer_msg_handler.go:539: [info] key:3 00000008 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.114435 peer_msg_handler.go:539: [info] key:3 00000008 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.115934 log.go:75: [info] [d.regionId: 6 d.peer.PeerId(): 11 在进行propose Propose No. 11 proposal  Term: 6]
+2022/07/28 19:59:05.119036 log.go:75: [info] [11 d.regionId: 6 entry.Index: 11 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.119076 peer_msg_handler.go:298: [info] regionID:6 ID: 11 proposals index:11 返回了cb, 类型是Snap
+2022/07/28 19:59:05.119216 cluster.go:406: [info] new scan 3 00000000-3 00000009
+2022/07/28 19:59:05.119261 cluster.go:326: [info] new put 3 00000009,x 3 9 y
+2022/07/28 19:59:05.122847 log.go:75: [info] [9 d.regionId: 6 entry.Index: 11 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.125090 log.go:75: [info] [10 d.regionId: 6 entry.Index: 11 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.125657 log.go:75: [info] [8 d.regionId: 6 entry.Index: 11 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.126832 peer_msg_handler.go:539: [info] key:3 00000009 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.126868 log.go:75: [info] [d.regionId: 6 d.peer.PeerId(): 11 在进行propose Propose No. 12 proposal  Term: 6]
+2022/07/28 19:59:05.129933 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:0,RegionSplitSize:200
+2022/07/28 19:59:05.129934 log.go:75: [info] [11 d.regionId: 6 entry.Index: 12 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.130006 peer_msg_handler.go:539: [info] key:3 00000009 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.130019 peer_msg_handler.go:298: [info] regionID:6 ID: 11 proposals index:12 返回了cb, 类型是Put
+2022/07/28 19:59:05.130228 cluster.go:394: [info] new scan request 3 00000000-3 00000010
+2022/07/28 19:59:05.131003 log.go:75: [info] [10 d.regionId: 6 entry.Index: 12 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.131023 peer_msg_handler.go:539: [info] key:3 00000009 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.131418 log.go:75: [info] [8 d.regionId: 6 entry.Index: 12 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.131437 peer_msg_handler.go:539: [info] key:3 00000009 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.132077 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行proposeConfChange Propose No. 63 proposal  Term: 6]
+2022/07/28 19:59:05.133374 log.go:75: [info] [d.regionId: 6 d.peer.PeerId(): 11 在进行propose Propose No. 13 proposal  Term: 6]
+2022/07/28 19:59:05.134651 log.go:75: [info] [9 d.regionId: 6 entry.Index: 12 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.134675 peer_msg_handler.go:539: [info] key:3 00000009 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.141753 log.go:75: [info] [11 d.regionId: 6 entry.Index: 13 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.141802 peer_msg_handler.go:298: [info] regionID:6 ID: 11 proposals index:13 返回了cb, 类型是Snap
+2022/07/28 19:59:05.141892 cluster.go:406: [info] new scan 3 00000000-3 00000010
+2022/07/28 19:59:05.141925 cluster.go:326: [info] new put 3 00000010,x 3 10 y
+2022/07/28 19:59:05.142982 log.go:75: [info] [8 d.regionId: 6 entry.Index: 13 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.142993 log.go:75: [info] [9 d.regionId: 6 entry.Index: 13 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.143211 log.go:75: [info] [10 d.regionId: 6 entry.Index: 13 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.144017 peer_msg_handler.go:539: [info] key:3 00000010 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.144048 log.go:75: [info] [d.regionId: 6 d.peer.PeerId(): 11 在进行propose Propose No. 14 proposal  Term: 6]
+2022/07/28 19:59:05.147812 log.go:75: [info] [11 d.regionId: 6 entry.Index: 14 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.147853 peer_msg_handler.go:539: [info] key:3 00000010 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.147867 peer_msg_handler.go:298: [info] regionID:6 ID: 11 proposals index:14 返回了cb, 类型是Put
+2022/07/28 19:59:05.148020 cluster.go:394: [info] new scan request 3 00000000-3 00000011
+2022/07/28 19:59:05.148926 log.go:75: [info] [8 d.regionId: 6 entry.Index: 14 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.148966 peer_msg_handler.go:539: [info] key:3 00000010 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.148932 log.go:75: [info] [9 d.regionId: 6 entry.Index: 14 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.149049 peer_msg_handler.go:539: [info] key:3 00000010 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.148955 log.go:75: [info] [10 d.regionId: 6 entry.Index: 14 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.149127 peer_msg_handler.go:539: [info] key:3 00000010 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.150176 log.go:75: [info] [d.regionId: 6 d.peer.PeerId(): 11 在进行propose Propose No. 15 proposal  Term: 6]
+2022/07/28 19:59:05.156084 log.go:75: [info] [11 d.regionId: 6 entry.Index: 15 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.156122 peer_msg_handler.go:298: [info] regionID:6 ID: 11 proposals index:15 返回了cb, 类型是Snap
+2022/07/28 19:59:05.156232 cluster.go:406: [info] new scan 3 00000000-3 00000011
+2022/07/28 19:59:05.156273 cluster.go:326: [info] new put 3 00000011,x 3 11 y
+2022/07/28 19:59:05.157277 log.go:75: [info] [10 d.regionId: 6 entry.Index: 15 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.157326 log.go:75: [info] [9 d.regionId: 6 entry.Index: 15 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.157380 log.go:75: [info] [8 d.regionId: 6 entry.Index: 15 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.159165 peer_msg_handler.go:539: [info] key:3 00000011 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.159209 log.go:75: [info] [d.regionId: 6 d.peer.PeerId(): 11 在进行propose Propose No. 16 proposal  Term: 6]
+2022/07/28 19:59:05.163237 log.go:75: [info] [11 d.regionId: 6 entry.Index: 16 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.163283 peer_msg_handler.go:539: [info] key:3 00000011 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.163297 peer_msg_handler.go:298: [info] regionID:6 ID: 11 proposals index:16 返回了cb, 类型是Put
+2022/07/28 19:59:05.163367 cluster.go:326: [info] new put 3 00000012,x 3 12 y
+2022/07/28 19:59:05.164285 peer_msg_handler.go:539: [info] key:3 00000012 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.164323 log.go:75: [info] [d.regionId: 6 d.peer.PeerId(): 11 在进行propose Propose No. 17 proposal  Term: 6]
+2022/07/28 19:59:05.164288 log.go:75: [info] [10 d.regionId: 6 entry.Index: 16 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.164426 peer_msg_handler.go:539: [info] key:3 00000011 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.171178 log.go:75: [info] [9 d.regionId: 6 entry.Index: 16 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.171216 peer_msg_handler.go:539: [info] key:3 00000011 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.180914 split_checker.go:45: [info] executing split check worker.Task: [regionId: 6, startKey: 33203030303030303030, endKey: ]
+2022/07/28 19:59:05.180988 split_checker.go:68: [info] no need to send, split key not found: [regionId: 6]
+2022/07/28 19:59:05.185248 log.go:75: [info] [8 d.regionId: 6 entry.Index: 16 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.185290 peer_msg_handler.go:539: [info] key:3 00000011 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.186344 log.go:75: [info] [11 d.regionId: 6 entry.Index: 17 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.186369 peer_msg_handler.go:539: [info] key:3 00000012 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.186379 peer_msg_handler.go:298: [info] regionID:6 ID: 11 proposals index:17 返回了cb, 类型是Put
+2022/07/28 19:59:05.186469 cluster.go:326: [info] new put 3 00000013,x 3 13 y
+2022/07/28 19:59:05.187530 log.go:75: [info] [10 d.regionId: 6 entry.Index: 17 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.187567 peer_msg_handler.go:539: [info] key:3 00000012 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.188247 peer_msg_handler.go:539: [info] key:3 00000013 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.188279 log.go:75: [info] [d.regionId: 6 d.peer.PeerId(): 11 在进行propose Propose No. 18 proposal  Term: 6]
+2022/07/28 19:59:05.190247 log.go:75: [info] [8 d.regionId: 6 entry.Index: 17 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.190282 peer_msg_handler.go:539: [info] key:3 00000012 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.191145 log.go:75: [info] [9 d.regionId: 6 entry.Index: 17 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.191167 peer_msg_handler.go:539: [info] key:3 00000012 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.193400 log.go:75: [info] [11 d.regionId: 6 entry.Index: 18 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.193423 peer_msg_handler.go:539: [info] key:3 00000013 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.193432 peer_msg_handler.go:298: [info] regionID:6 ID: 11 proposals index:18 返回了cb, 类型是Put
+2022/07/28 19:59:05.193487 cluster.go:326: [info] new put 3 00000014,x 3 14 y
+2022/07/28 19:59:05.194290 log.go:75: [info] [10 d.regionId: 6 entry.Index: 18 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.194318 peer_msg_handler.go:539: [info] key:3 00000013 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.194294 log.go:75: [info] [9 d.regionId: 6 entry.Index: 18 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.194345 peer_msg_handler.go:539: [info] key:3 00000013 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.194418 peer_msg_handler.go:539: [info] key:3 00000014 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.194314 log.go:75: [info] [8 d.regionId: 6 entry.Index: 18 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.194481 peer_msg_handler.go:539: [info] key:3 00000013 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.194443 log.go:75: [info] [d.regionId: 6 d.peer.PeerId(): 11 在进行propose Propose No. 19 proposal  Term: 6]
+2022/07/28 19:59:05.198071 log.go:75: [info] [11 d.regionId: 6 entry.Index: 19 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.198099 peer_msg_handler.go:539: [info] key:3 00000014 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.198108 peer_msg_handler.go:298: [info] regionID:6 ID: 11 proposals index:19 返回了cb, 类型是Put
+2022/07/28 19:59:05.198213 cluster.go:326: [info] new put 3 00000015,x 3 15 y
+2022/07/28 19:59:05.199183 log.go:75: [info] [9 d.regionId: 6 entry.Index: 19 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.199221 peer_msg_handler.go:539: [info] key:3 00000014 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.199522 log.go:75: [info] [8 d.regionId: 6 entry.Index: 19 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.199549 peer_msg_handler.go:539: [info] key:3 00000014 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.200479 log.go:75: [info] [10 d.regionId: 6 entry.Index: 19 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.200518 peer_msg_handler.go:539: [info] key:3 00000014 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.203683 peer_msg_handler.go:539: [info] key:3 00000015 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.204409 log.go:75: [info] [d.regionId: 6 d.peer.PeerId(): 11 在进行propose Propose No. 20 proposal  Term: 6]
+2022/07/28 19:59:05.209480 log.go:75: [info] [11 d.regionId: 6 entry.Index: 20 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.209513 peer_msg_handler.go:539: [info] key:3 00000015 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.209531 peer_msg_handler.go:298: [info] regionID:6 ID: 11 proposals index:20 返回了cb, 类型是Put
+2022/07/28 19:59:05.209645 cluster.go:326: [info] new put 3 00000016,x 3 16 y
+2022/07/28 19:59:05.210219 log.go:75: [info] [8 d.regionId: 6 entry.Index: 20 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.210242 peer_msg_handler.go:539: [info] key:3 00000015 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.210898 log.go:75: [info] [9 d.regionId: 6 entry.Index: 20 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.210926 peer_msg_handler.go:539: [info] key:3 00000015 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.211230 log.go:75: [info] [10 d.regionId: 6 entry.Index: 20 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.211255 peer_msg_handler.go:539: [info] key:3 00000015 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.211859 peer_msg_handler.go:539: [info] key:3 00000016 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.211886 log.go:75: [info] [d.regionId: 6 d.peer.PeerId(): 11 在进行propose Propose No. 21 proposal  Term: 6]
+2022/07/28 19:59:05.216630 log.go:75: [info] [11 d.regionId: 6 entry.Index: 21 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.216679 peer_msg_handler.go:539: [info] key:3 00000016 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.216696 peer_msg_handler.go:298: [info] regionID:6 ID: 11 proposals index:21 返回了cb, 类型是Put
+2022/07/28 19:59:05.216878 cluster.go:326: [info] new put 3 00000017,x 3 17 y
+2022/07/28 19:59:05.217609 log.go:75: [info] [9 d.regionId: 6 entry.Index: 21 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.217642 peer_msg_handler.go:539: [info] key:3 00000016 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.218272 log.go:75: [info] [10 d.regionId: 6 entry.Index: 21 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.218300 peer_msg_handler.go:539: [info] key:3 00000016 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.220555 peer_msg_handler.go:539: [info] key:3 00000017 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.220584 log.go:75: [info] [d.regionId: 6 d.peer.PeerId(): 11 在进行propose Propose No. 22 proposal  Term: 6]
+2022/07/28 19:59:05.221199 log.go:75: [info] [8 d.regionId: 6 entry.Index: 21 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.221219 peer_msg_handler.go:539: [info] key:3 00000016 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.225038 log.go:75: [info] [11 d.regionId: 6 entry.Index: 22 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.225073 peer_msg_handler.go:539: [info] key:3 00000017 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.225091 peer_msg_handler.go:298: [info] regionID:6 ID: 11 proposals index:22 返回了cb, 类型是Put
+2022/07/28 19:59:05.225234 cluster.go:394: [info] new scan request 3 00000000-3 00000018
+2022/07/28 19:59:05.226126 log.go:75: [info] [9 d.regionId: 6 entry.Index: 22 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.226182 peer_msg_handler.go:539: [info] key:3 00000017 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.226516 log.go:75: [info] [8 d.regionId: 6 entry.Index: 22 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.226539 peer_msg_handler.go:539: [info] key:3 00000017 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.227124 log.go:75: [info] [d.regionId: 6 d.peer.PeerId(): 11 在进行propose Propose No. 23 proposal  Term: 6]
+2022/07/28 19:59:05.227599 log.go:75: [info] [10 d.regionId: 6 entry.Index: 22 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.227619 peer_msg_handler.go:539: [info] key:3 00000017 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.231116 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:0,RegionSplitSize:200
+2022/07/28 19:59:05.232285 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行proposeConfChange Propose No. 64 proposal  Term: 6]
+2022/07/28 19:59:05.232452 log.go:75: [info] [11 d.regionId: 6 entry.Index: 23 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.232478 peer_msg_handler.go:298: [info] regionID:6 ID: 11 proposals index:23 返回了cb, 类型是Snap
+2022/07/28 19:59:05.232658 cluster.go:406: [info] new scan 3 00000000-3 00000018
+2022/07/28 19:59:05.232708 cluster.go:326: [info] new put 3 00000018,x 3 18 y
+2022/07/28 19:59:05.234222 peer_msg_handler.go:539: [info] key:3 00000018 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.234256 log.go:75: [info] [d.regionId: 6 d.peer.PeerId(): 11 在进行propose Propose No. 24 proposal  Term: 6]
+2022/07/28 19:59:05.234346 log.go:75: [info] [10 d.regionId: 6 entry.Index: 23 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.236772 log.go:75: [info] [8 d.regionId: 6 entry.Index: 23 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.239053 log.go:75: [info] [9 d.regionId: 6 entry.Index: 23 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.280840 split_checker.go:45: [info] executing split check worker.Task: [regionId: 6, startKey: 33203030303030303030, endKey: ]
+2022/07/28 19:59:05.283290 peer_msg_handler.go:522: [info] [region 6] 11 on split with 3 00000011
+2022/07/28 19:59:05.283344 peer_msg_handler.go:539: [info] key:3 00000011 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.283367 log.go:75: [info] [d.regionId: 6 d.peer.PeerId(): 11 在proposeAdminSplit Propose No. 25 proposal  Term: 6]
+2022/07/28 19:59:05.288123 log.go:75: [info] [11 d.regionId: 6 entry.Index: 24 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.288151 peer_msg_handler.go:539: [info] key:3 00000018 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.288160 peer_msg_handler.go:298: [info] regionID:6 ID: 11 proposals index:24 返回了cb, 类型是Put
+2022/07/28 19:59:05.288247 cluster.go:326: [info] new put 3 00000019,x 3 19 y
+2022/07/28 19:59:05.289992 log.go:75: [info] [9 d.regionId: 6 entry.Index: 24 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.290025 peer_msg_handler.go:539: [info] key:3 00000018 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.290593 log.go:75: [info] [11 d.regionId: 6 entry.Index: 25 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.290626 log.go:75: [info] [6 号region 11 号peer正在处理admin请求,类型是： Split]
+2022/07/28 19:59:05.290643 peer_msg_handler.go:539: [info] key:3 00000011 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.290678 peer.go:41: [info] region id:18 start_key:"3 00000011" region_epoch:<conf_ver:1 version:1 > peers:<id:19 store_id:1 > peers:<id:20 store_id:2 > peers:<id:21 store_id:3 > peers:<id:22 store_id:4 > peers:<id:23 store_id:5 >  create peer with ID 23
+2022/07/28 19:59:05.291143 log.go:75: [info] [8 d.regionId: 6 entry.Index: 24 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.291164 peer_msg_handler.go:539: [info] key:3 00000018 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.292234 log.go:75: [info] [9 d.regionId: 6 entry.Index: 25 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.292267 log.go:75: [info] [6 号region 9 号peer正在处理admin请求,类型是： Split]
+2022/07/28 19:59:05.292286 peer_msg_handler.go:539: [info] key:3 00000011 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.292327 peer.go:41: [info] region id:18 start_key:"3 00000011" region_epoch:<conf_ver:1 version:1 > peers:<id:19 store_id:1 > peers:<id:20 store_id:2 > peers:<id:21 store_id:3 > peers:<id:22 store_id:4 > peers:<id:23 store_id:5 >  create peer with ID 21
+2022/07/28 19:59:05.293731 log.go:75: [info] [8 d.regionId: 6 entry.Index: 25 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.293769 log.go:75: [info] [6 号region 8 号peer正在处理admin请求,类型是： Split]
+2022/07/28 19:59:05.293786 peer_msg_handler.go:539: [info] key:3 00000011 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.293854 peer.go:41: [info] region id:18 start_key:"3 00000011" region_epoch:<conf_ver:1 version:1 > peers:<id:19 store_id:1 > peers:<id:20 store_id:2 > peers:<id:21 store_id:3 > peers:<id:22 store_id:4 > peers:<id:23 store_id:5 >  create peer with ID 20
+2022/07/28 19:59:05.295205 peer_msg_handler.go:397: [info] StoreID:5 PeerID:11 oldRegionID:6 StartKey:3 00000000 EndKey:3 00000011
+2022/07/28 19:59:05.295279 peer_msg_handler.go:398: [info] StoreID:5 PeerID:23 newRegionID:18 StartKey:3 00000011 EndKey:
+2022/07/28 19:59:05.295316 peer_msg_handler.go:427: [info] regionID:6 ID: 11 proposals index:25 返回了cb, 类型是Split
+2022/07/28 19:59:05.295860 log.go:75: [info] [10 d.regionId: 6 entry.Index: 24 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.295885 peer_msg_handler.go:539: [info] key:3 00000018 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.297193 peer_msg_handler.go:397: [info] StoreID:3 PeerID:9 oldRegionID:6 StartKey:3 00000000 EndKey:3 00000011
+2022/07/28 19:59:05.297247 peer_msg_handler.go:398: [info] StoreID:3 PeerID:21 newRegionID:18 StartKey:3 00000011 EndKey:
+2022/07/28 19:59:05.298207 log.go:75: [info] [10 d.regionId: 6 entry.Index: 25 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.298279 log.go:75: [info] [6 号region 10 号peer正在处理admin请求,类型是： Split]
+2022/07/28 19:59:05.298300 peer_msg_handler.go:539: [info] key:3 00000011 startKey:3 00000000 endKey:
+2022/07/28 19:59:05.298334 peer.go:41: [info] region id:18 start_key:"3 00000011" region_epoch:<conf_ver:1 version:1 > peers:<id:19 store_id:1 > peers:<id:20 store_id:2 > peers:<id:21 store_id:3 > peers:<id:22 store_id:4 > peers:<id:23 store_id:5 >  create peer with ID 22
+2022/07/28 19:59:05.298685 peer_msg_handler.go:397: [info] StoreID:2 PeerID:8 oldRegionID:6 StartKey:3 00000000 EndKey:3 00000011
+2022/07/28 19:59:05.298729 peer_msg_handler.go:398: [info] StoreID:2 PeerID:20 newRegionID:18 StartKey:3 00000011 EndKey:
+2022/07/28 19:59:05.299870 log.go:75: [info] [17 d.regionId: 12 entry.Index: 6 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.302071 log.go:75: [info] [15 d.regionId: 12 entry.Index: 6 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.303515 peer_msg_handler.go:397: [info] StoreID:4 PeerID:10 oldRegionID:6 StartKey:3 00000000 EndKey:3 00000011
+2022/07/28 19:59:05.303576 peer_msg_handler.go:398: [info] StoreID:4 PeerID:22 newRegionID:18 StartKey:3 00000011 EndKey:
+2022/07/28 19:59:05.303607 log.go:75: [info] [14 d.regionId: 12 entry.Index: 6 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.306106 log.go:75: [info] [16 d.regionId: 12 entry.Index: 6 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.320776 test_test.go:104: [info] partition: [1 3], [2 4 5]
+2022/07/28 19:59:05.329869 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:0,RegionSplitSize:200
+2022/07/28 19:59:05.331011 split_checker.go:45: [info] executing split check worker.Task: [regionId: 12, startKey: 31203030303030303033, endKey: 33203030303030303030]
+2022/07/28 19:59:05.331055 split_checker.go:85: [info] r.checker.currentSize:187
+2022/07/28 19:59:05.331069 split_checker.go:68: [info] no need to send, split key not found: [regionId: 12]
+2022/07/28 19:59:05.331118 peer_msg_handler.go:539: [info] key:1 00000009 startKey:1 00000003 endKey:3 00000000
+2022/07/28 19:59:05.331140 log.go:75: [info] [d.regionId: 12 d.peer.PeerId(): 17 在进行propose Propose No. 7 proposal  Term: 6]
+2022/07/28 19:59:05.332268 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 3 在进行proposeConfChange Propose No. 64 proposal  Term: 6]
+2022/07/28 19:59:05.335988 log.go:75: [info] [17 d.regionId: 12 entry.Index: 7 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.336034 peer_msg_handler.go:539: [info] key:1 00000009 startKey:1 00000003 endKey:3 00000000
+2022/07/28 19:59:05.336046 peer_msg_handler.go:298: [info] regionID:12 ID: 17 proposals index:7 返回了cb, 类型是Put
+2022/07/28 19:59:05.335993 log.go:75: [info] [1 d.regionId: 1 entry.Index: 62 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.336157 cluster.go:394: [info] new scan request 1 00000000-1 00000010
+2022/07/28 19:59:05.336911 log.go:75: [info] [16 d.regionId: 12 entry.Index: 7 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.336933 peer_msg_handler.go:539: [info] key:1 00000009 startKey:1 00000003 endKey:3 00000000
+2022/07/28 19:59:05.336942 log.go:75: [info] [3 d.regionId: 1 entry.Index: 63 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.336967 peer_msg_handler.go:970: [info] [region 1] 3 starts destroy
+2022/07/28 19:59:05.336975 peer.go:203: [info] [region 1] 3 begin to destroy
+2022/07/28 19:59:05.337026 peer_storage.go:298: [info] [region 1] clear peer 1 meta key 1 apply key 1 raft key and 58 raft logs, takes 42.9µs
+2022/07/28 19:59:05.338376 log.go:75: [info] [1 d.regionId: 1 entry.Index: 63 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.340951 peer.go:231: [info] [region 1] 3 destroy itself, takes 3.9739ms
+2022/07/28 19:59:05.344166 region_task.go:138: [info] succeed in deleting data in range. [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:05.380929 split_checker.go:45: [info] executing split check worker.Task: [regionId: 6, startKey: 33203030303030303030, endKey: 33203030303030303131]
+2022/07/28 19:59:05.380963 split_checker.go:85: [info] r.checker.currentSize:188
+2022/07/28 19:59:05.380971 split_checker.go:68: [info] no need to send, split key not found: [regionId: 6]
+2022/07/28 19:59:05.386263 log.go:75: [info] [14 d.regionId: 12 entry.Index: 7 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.386300 peer_msg_handler.go:539: [info] key:1 00000009 startKey:1 00000003 endKey:3 00000000
+2022/07/28 19:59:05.430932 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:17,RegionSplitSize:200
+2022/07/28 19:59:05.480864 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:188,d.SizeDiffHint:0,RegionSplitSize:200
+2022/07/28 19:59:05.530862 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:17,RegionSplitSize:200
+2022/07/28 19:59:05.580940 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:188,d.SizeDiffHint:0,RegionSplitSize:200
+2022/07/28 19:59:05.630877 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:17,RegionSplitSize:200
+2022/07/28 19:59:05.680855 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:188,d.SizeDiffHint:0,RegionSplitSize:200
+2022/07/28 19:59:05.730898 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:17,RegionSplitSize:200
+2022/07/28 19:59:05.780950 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:188,d.SizeDiffHint:0,RegionSplitSize:200
+2022/07/28 19:59:05.797132 log.go:75: [info] [23 d.regionId: 18 entry.Index: 6 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.798271 log.go:75: [info] [22 d.regionId: 18 entry.Index: 6 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.798504 log.go:75: [info] [20 d.regionId: 18 entry.Index: 6 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.830882 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:17,RegionSplitSize:200
+2022/07/28 19:59:05.870943 test_test.go:104: [info] partition: [4], [1 2 3 5]
+2022/07/28 19:59:05.881687 split_checker.go:45: [info] executing split check worker.Task: [regionId: 18, startKey: 33203030303030303131, endKey: ]
+2022/07/28 19:59:05.881736 split_checker.go:68: [info] no need to send, split key not found: [regionId: 18]
+2022/07/28 19:59:05.885474 log.go:75: [info] [d.regionId: 18 d.peer.PeerId(): 23 在进行proposeConfChange Propose No. 7 proposal  Term: 6]
+2022/07/28 19:59:05.885540 store_worker.go:216: [info] msg region_id:18 from_peer:<id:23 store_id:5 > to_peer:<id:19 store_id:1 > message:<msg_type:MsgHeartbeat to:19 from:23 term:6 > region_epoch:<conf_ver:1 version:1 > start_key:"3 00000011"  is overlapped with exist region id:6 start_key:"3 00000000" region_epoch:<conf_ver:1 version:1 > peers:<id:7 store_id:1 > peers:<id:8 store_id:2 > peers:<id:9 store_id:3 > peers:<id:10 store_id:4 > peers:<id:11 store_id:5 > 
+2022/07/28 19:59:05.886839 store_worker.go:216: [info] msg region_id:18 from_peer:<id:23 store_id:5 > to_peer:<id:19 store_id:1 > message:<msg_type:MsgHeartbeat to:19 from:23 term:6 > region_epoch:<conf_ver:1 version:1 > start_key:"3 00000011"  is overlapped with exist region id:6 start_key:"3 00000000" region_epoch:<conf_ver:1 version:1 > peers:<id:7 store_id:1 > peers:<id:8 store_id:2 > peers:<id:9 store_id:3 > peers:<id:10 store_id:4 > peers:<id:11 store_id:5 > 
+2022/07/28 19:59:05.886869 store_worker.go:208: [info] target peer id:19 store_id:1  doesn't exist
+2022/07/28 19:59:05.887936 log.go:75: [info] [21 d.regionId: 18 entry.Index: 6 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.888736 log.go:75: [info] [d.regionId: 18 d.peer.PeerId(): 23 在进行proposeConfChange Propose No. 8 proposal  Term: 6]
+2022/07/28 19:59:05.890159 log.go:75: [info] [13 d.regionId: 12 entry.Index: 6 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.890746 store_worker.go:216: [info] msg region_id:18 from_peer:<id:23 store_id:5 > to_peer:<id:19 store_id:1 > message:<msg_type:MsgHeartbeat to:19 from:23 term:6 > region_epoch:<conf_ver:1 version:1 > start_key:"3 00000011"  is overlapped with exist region id:6 start_key:"3 00000000" region_epoch:<conf_ver:1 version:1 > peers:<id:7 store_id:1 > peers:<id:8 store_id:2 > peers:<id:9 store_id:3 > peers:<id:10 store_id:4 > peers:<id:11 store_id:5 > 
+2022/07/28 19:59:05.891797 log.go:75: [info] [13 d.regionId: 12 entry.Index: 7 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.891820 peer_msg_handler.go:539: [info] key:1 00000009 startKey:1 00000003 endKey:3 00000000
+2022/07/28 19:59:05.892937 log.go:75: [info] [23 d.regionId: 18 entry.Index: 7 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.892962 peer_msg_handler.go:970: [info] [region 18] 23 starts destroy
+2022/07/28 19:59:05.892971 peer.go:203: [info] [region 18] 23 begin to destroy
+2022/07/28 19:59:05.892991 peer_storage.go:298: [info] [region 18] clear peer 1 meta key 1 apply key 1 raft key and 2 raft logs, takes 10.7µs
+2022/07/28 19:59:05.894158 log.go:75: [info] [21 d.regionId: 18 entry.Index: 7 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.894915 peer.go:231: [info] [region 18] 23 destroy itself, takes 1.9417ms
+2022/07/28 19:59:05.895909 region_task.go:138: [info] succeed in deleting data in range. [regionId: 18, startKey: 33203030303030303131, endKey: ]
+2022/07/28 19:59:05.930851 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:17,RegionSplitSize:200
+2022/07/28 19:59:05.987589 log.go:75: [info] [15 d.regionId: 12 entry.Index: 7 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.987620 peer_msg_handler.go:539: [info] key:1 00000009 startKey:1 00000003 endKey:3 00000000
+2022/07/28 19:59:05.988574 log.go:75: [info] [2 d.regionId: 1 entry.Index: 63 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.989514 log.go:75: [info] [1 d.regionId: 1 entry.Index: 64 entry.Term: 7 在进行process]
+2022/07/28 19:59:05.989514 log.go:75: [info] [2 d.regionId: 1 entry.Index: 64 entry.Term: 7 在进行process]
+2022/07/28 19:59:05.989605 log.go:75: [info] [5 d.regionId: 1 entry.Index: 63 entry.Term: 6 在进行process]
+2022/07/28 19:59:05.990815 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 2 在进行proposeConfChange Propose No. 65 proposal  Term: 7]
+2022/07/28 19:59:05.990953 log.go:75: [info] [5 d.regionId: 1 entry.Index: 64 entry.Term: 7 在进行process]
+2022/07/28 19:59:05.993953 log.go:75: [info] [2 d.regionId: 1 entry.Index: 65 entry.Term: 7 在进行process]
+2022/07/28 19:59:05.993995 peer_msg_handler.go:166: [info] regionID:1 ID: 2 proposals index:65 返回了cb, 类型是ChangePeer
+2022/07/28 19:59:05.995101 log.go:75: [info] [1 d.regionId: 1 entry.Index: 65 entry.Term: 7 在进行process]
+2022/07/28 19:59:05.995194 log.go:75: [info] [5 d.regionId: 1 entry.Index: 65 entry.Term: 7 在进行process]
+2022/07/28 19:59:06.029462 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:06.029503 split_checker.go:85: [info] r.checker.currentSize:187
+2022/07/28 19:59:06.029512 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:06.031114 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:17,RegionSplitSize:200
+2022/07/28 19:59:06.080922 peer.go:51: [info] [region 1] replicates peer with ID 24
+2022/07/28 19:59:06.083290 peer_storage.go:182: [info] [region 1] 2 requesting snapshot
+2022/07/28 19:59:06.085858 snap.go:549: [info] region 1 scan snapshot /tmp/test-raftstore3874592904/snap/gen_1_7_65_(default|write|lock).sst, key count 11, size 275
+2022/07/28 19:59:06.129460 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:0,RegionSplitSize:200
+2022/07/28 19:59:06.130868 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:17,RegionSplitSize:200
+2022/07/28 19:59:06.189804 peer_storage.go:339: [info] [region 1] 24 begin to apply snapshot
+2022/07/28 19:59:06.189863 region_task.go:93: [info] begin apply snap data. [regionId: 1]
+2022/07/28 19:59:06.191575 region_task.go:138: [info] succeed in deleting data in range. [regionId: 1, startKey: , endKey: ]
+2022/07/28 19:59:06.215623 snap.go:700: [info] apply snapshot ingested 1 tables
+2022/07/28 19:59:06.215709 region_task.go:118: [info] applying new data. [regionId: 1, timeTakes: 23.9803ms]
+2022/07/28 19:59:06.215756 peer_storage.go:372: [info] [region 1] 24 完成了ApplySnapshot
+2022/07/28 19:59:06.229460 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:0,RegionSplitSize:200
+2022/07/28 19:59:06.229551 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 2 在进行proposeConfChange Propose No. 66 proposal  Term: 7]
+2022/07/28 19:59:06.232110 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:17,RegionSplitSize:200
+2022/07/28 19:59:06.233255 log.go:75: [info] [2 d.regionId: 1 entry.Index: 66 entry.Term: 7 在进行process]
+2022/07/28 19:59:06.233308 peer_msg_handler.go:970: [info] [region 1] 2 starts destroy
+2022/07/28 19:59:06.233320 peer.go:203: [info] [region 1] 2 begin to destroy
+2022/07/28 19:59:06.233348 peer_storage.go:298: [info] [region 1] clear peer 1 meta key 1 apply key 1 raft key and 61 raft logs, takes 15.4µs
+2022/07/28 19:59:06.236008 log.go:75: [info] [5 d.regionId: 1 entry.Index: 66 entry.Term: 7 在进行process]
+2022/07/28 19:59:06.236521 log.go:75: [info] [1 d.regionId: 1 entry.Index: 66 entry.Term: 7 在进行process]
+2022/07/28 19:59:06.237073 log.go:75: [info] [24 d.regionId: 1 entry.Index: 66 entry.Term: 7 在进行process]
+2022/07/28 19:59:06.240460 peer.go:231: [info] [region 1] 2 destroy itself, takes 7.1343ms
+2022/07/28 19:59:06.241880 region_task.go:138: [info] succeed in deleting data in range. [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:06.330850 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:17,RegionSplitSize:200
+2022/07/28 19:59:06.430843 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:17,RegionSplitSize:200
+2022/07/28 19:59:06.531593 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:17,RegionSplitSize:200
+2022/07/28 19:59:06.553072 test_test.go:104: [info] partition: [2 5], [1 3 4]
+2022/07/28 19:59:06.584285 store_worker.go:216: [info] msg region_id:18 from_peer:<id:21 store_id:3 > to_peer:<id:19 store_id:1 > message:<msg_type:MsgRequestVote to:19 from:21 term:7 log_term:6 index:7 > region_epoch:<conf_ver:2 version:1 > start_key:"3 00000011"  is overlapped with exist region id:6 start_key:"3 00000000" region_epoch:<conf_ver:1 version:1 > peers:<id:7 store_id:1 > peers:<id:8 store_id:2 > peers:<id:9 store_id:3 > peers:<id:10 store_id:4 > peers:<id:11 store_id:5 > 
+2022/07/28 19:59:06.595521 log.go:75: [info] [7 d.regionId: 6 entry.Index: 6 entry.Term: 6 在进行process]
+2022/07/28 19:59:06.596593 log.go:75: [info] [7 d.regionId: 6 entry.Index: 7 entry.Term: 6 在进行process]
+2022/07/28 19:59:06.596648 peer_msg_handler.go:539: [info] key:3 00000006 startKey:3 00000000 endKey:
+2022/07/28 19:59:06.596692 log.go:75: [info] [9 d.regionId: 6 entry.Index: 26 entry.Term: 8 在进行process]
+2022/07/28 19:59:06.598060 log.go:75: [info] [10 d.regionId: 6 entry.Index: 26 entry.Term: 8 在进行process]
+2022/07/28 19:59:06.598074 log.go:75: [info] [7 d.regionId: 6 entry.Index: 8 entry.Term: 6 在进行process]
+2022/07/28 19:59:06.599553 log.go:75: [info] [7 d.regionId: 6 entry.Index: 9 entry.Term: 6 在进行process]
+2022/07/28 19:59:06.599622 peer_msg_handler.go:539: [info] key:3 00000007 startKey:3 00000000 endKey:
+2022/07/28 19:59:06.601307 log.go:75: [info] [7 d.regionId: 6 entry.Index: 10 entry.Term: 6 在进行process]
+2022/07/28 19:59:06.601604 peer_msg_handler.go:539: [info] key:3 00000008 startKey:3 00000000 endKey:
+2022/07/28 19:59:06.603384 log.go:75: [info] [7 d.regionId: 6 entry.Index: 11 entry.Term: 6 在进行process]
+2022/07/28 19:59:06.604732 log.go:75: [info] [7 d.regionId: 6 entry.Index: 12 entry.Term: 6 在进行process]
+2022/07/28 19:59:06.604787 peer_msg_handler.go:539: [info] key:3 00000009 startKey:3 00000000 endKey:
+2022/07/28 19:59:06.605757 log.go:75: [info] [7 d.regionId: 6 entry.Index: 13 entry.Term: 6 在进行process]
+2022/07/28 19:59:06.608583 log.go:75: [info] [7 d.regionId: 6 entry.Index: 14 entry.Term: 6 在进行process]
+2022/07/28 19:59:06.608651 peer_msg_handler.go:539: [info] key:3 00000010 startKey:3 00000000 endKey:
+2022/07/28 19:59:06.609549 log.go:75: [info] [7 d.regionId: 6 entry.Index: 15 entry.Term: 6 在进行process]
+2022/07/28 19:59:06.610625 log.go:75: [info] [7 d.regionId: 6 entry.Index: 16 entry.Term: 6 在进行process]
+2022/07/28 19:59:06.610661 peer_msg_handler.go:539: [info] key:3 00000011 startKey:3 00000000 endKey:
+2022/07/28 19:59:06.611723 log.go:75: [info] [7 d.regionId: 6 entry.Index: 17 entry.Term: 6 在进行process]
+2022/07/28 19:59:06.611811 peer_msg_handler.go:539: [info] key:3 00000012 startKey:3 00000000 endKey:
+2022/07/28 19:59:06.613307 log.go:75: [info] [7 d.regionId: 6 entry.Index: 18 entry.Term: 6 在进行process]
+2022/07/28 19:59:06.613355 peer_msg_handler.go:539: [info] key:3 00000013 startKey:3 00000000 endKey:
+2022/07/28 19:59:06.616091 log.go:75: [info] [7 d.regionId: 6 entry.Index: 19 entry.Term: 6 在进行process]
+2022/07/28 19:59:06.616485 peer_msg_handler.go:539: [info] key:3 00000014 startKey:3 00000000 endKey:
+2022/07/28 19:59:06.618163 log.go:75: [info] [7 d.regionId: 6 entry.Index: 20 entry.Term: 6 在进行process]
+2022/07/28 19:59:06.618235 peer_msg_handler.go:539: [info] key:3 00000015 startKey:3 00000000 endKey:
+2022/07/28 19:59:06.619188 log.go:75: [info] [7 d.regionId: 6 entry.Index: 21 entry.Term: 6 在进行process]
+2022/07/28 19:59:06.619219 peer_msg_handler.go:539: [info] key:3 00000016 startKey:3 00000000 endKey:
+2022/07/28 19:59:06.620443 log.go:75: [info] [7 d.regionId: 6 entry.Index: 22 entry.Term: 6 在进行process]
+2022/07/28 19:59:06.620509 peer_msg_handler.go:539: [info] key:3 00000017 startKey:3 00000000 endKey:
+2022/07/28 19:59:06.621414 log.go:75: [info] [7 d.regionId: 6 entry.Index: 23 entry.Term: 6 在进行process]
+2022/07/28 19:59:06.622476 log.go:75: [info] [7 d.regionId: 6 entry.Index: 24 entry.Term: 6 在进行process]
+2022/07/28 19:59:06.622506 peer_msg_handler.go:539: [info] key:3 00000018 startKey:3 00000000 endKey:
+2022/07/28 19:59:06.623405 log.go:75: [info] [7 d.regionId: 6 entry.Index: 25 entry.Term: 6 在进行process]
+2022/07/28 19:59:06.623442 log.go:75: [info] [6 号region 7 号peer正在处理admin请求,类型是： Split]
+2022/07/28 19:59:06.623462 peer_msg_handler.go:539: [info] key:3 00000011 startKey:3 00000000 endKey:
+2022/07/28 19:59:06.623542 peer.go:41: [info] region id:18 start_key:"3 00000011" region_epoch:<conf_ver:1 version:1 > peers:<id:19 store_id:1 > peers:<id:20 store_id:2 > peers:<id:21 store_id:3 > peers:<id:22 store_id:4 > peers:<id:23 store_id:5 >  create peer with ID 19
+2022/07/28 19:59:06.625704 peer_msg_handler.go:397: [info] StoreID:1 PeerID:7 oldRegionID:6 StartKey:3 00000000 EndKey:3 00000011
+2022/07/28 19:59:06.625799 peer_msg_handler.go:398: [info] StoreID:1 PeerID:19 newRegionID:18 StartKey:3 00000011 EndKey:
+2022/07/28 19:59:06.630892 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:17,RegionSplitSize:200
+2022/07/28 19:59:06.679962 split_checker.go:45: [info] executing split check worker.Task: [regionId: 6, startKey: 33203030303030303030, endKey: 33203030303030303131]
+2022/07/28 19:59:06.680031 split_checker.go:68: [info] no need to send, split key not found: [regionId: 6]
+2022/07/28 19:59:06.684760 log.go:75: [info] [7 d.regionId: 6 entry.Index: 26 entry.Term: 8 在进行process]
+2022/07/28 19:59:06.730882 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:17,RegionSplitSize:200
+2022/07/28 19:59:06.779877 split_checker.go:45: [info] executing split check worker.Task: [regionId: 6, startKey: 33203030303030303030, endKey: 33203030303030303131]
+2022/07/28 19:59:06.779938 split_checker.go:68: [info] no need to send, split key not found: [regionId: 6]
+2022/07/28 19:59:06.830857 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:17,RegionSplitSize:200
+2022/07/28 19:59:06.879952 split_checker.go:45: [info] executing split check worker.Task: [regionId: 6, startKey: 33203030303030303030, endKey: 33203030303030303131]
+2022/07/28 19:59:06.880031 split_checker.go:68: [info] no need to send, split key not found: [regionId: 6]
+2022/07/28 19:59:06.930869 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:17,RegionSplitSize:200
+2022/07/28 19:59:06.979953 split_checker.go:45: [info] executing split check worker.Task: [regionId: 6, startKey: 33203030303030303030, endKey: 33203030303030303131]
+2022/07/28 19:59:06.980025 split_checker.go:68: [info] no need to send, split key not found: [regionId: 6]
+2022/07/28 19:59:07.030966 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:17,RegionSplitSize:200
+2022/07/28 19:59:07.080006 split_checker.go:45: [info] executing split check worker.Task: [regionId: 6, startKey: 33203030303030303030, endKey: 33203030303030303131]
+2022/07/28 19:59:07.080063 split_checker.go:68: [info] no need to send, split key not found: [regionId: 6]
+2022/07/28 19:59:07.130994 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:17,RegionSplitSize:200
+2022/07/28 19:59:07.179948 split_checker.go:45: [info] executing split check worker.Task: [regionId: 6, startKey: 33203030303030303030, endKey: 33203030303030303131]
+2022/07/28 19:59:07.180017 split_checker.go:68: [info] no need to send, split key not found: [regionId: 6]
+2022/07/28 19:59:07.229256 test_test.go:104: [info] partition: [1 2 4 5], [3]
+2022/07/28 19:59:07.230866 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:187,d.SizeDiffHint:17,RegionSplitSize:200
+2022/07/28 19:59:07.279941 split_checker.go:45: [info] executing split check worker.Task: [regionId: 6, startKey: 33203030303030303030, endKey: 33203030303030303131]
+2022/07/28 19:59:07.280010 split_checker.go:68: [info] no need to send, split key not found: [regionId: 6]
+2022/07/28 19:59:07.380355 split_checker.go:45: [info] executing split check worker.Task: [regionId: 6, startKey: 33203030303030303030, endKey: 33203030303030303131]
+2022/07/28 19:59:07.380462 split_checker.go:68: [info] no need to send, split key not found: [regionId: 6]
+2022/07/28 19:59:07.479892 split_checker.go:45: [info] executing split check worker.Task: [regionId: 6, startKey: 33203030303030303030, endKey: 33203030303030303131]
+2022/07/28 19:59:07.479985 split_checker.go:68: [info] no need to send, split key not found: [regionId: 6]
+2022/07/28 19:59:07.535787 log.go:75: [info] [16 d.regionId: 12 entry.Index: 8 entry.Term: 8 在进行process]
+2022/07/28 19:59:07.536695 log.go:75: [info] [13 d.regionId: 12 entry.Index: 8 entry.Term: 8 在进行process]
+2022/07/28 19:59:07.536708 log.go:75: [info] [17 d.regionId: 12 entry.Index: 8 entry.Term: 8 在进行process]
+2022/07/28 19:59:07.580010 split_checker.go:45: [info] executing split check worker.Task: [regionId: 6, startKey: 33203030303030303030, endKey: 33203030303030303131]
+2022/07/28 19:59:07.580080 split_checker.go:68: [info] no need to send, split key not found: [regionId: 6]
+2022/07/28 19:59:07.630524 split_checker.go:45: [info] executing split check worker.Task: [regionId: 12, startKey: 31203030303030303033, endKey: 33203030303030303030]
+2022/07/28 19:59:07.630583 split_checker.go:85: [info] r.checker.currentSize:204
+2022/07/28 19:59:07.630597 split_checker.go:68: [info] no need to send, split key not found: [regionId: 12]
+2022/07/28 19:59:07.635621 log.go:75: [info] [14 d.regionId: 12 entry.Index: 8 entry.Term: 8 在进行process]
+2022/07/28 19:59:07.679939 split_checker.go:45: [info] executing split check worker.Task: [regionId: 6, startKey: 33203030303030303030, endKey: 33203030303030303131]
+2022/07/28 19:59:07.680004 split_checker.go:68: [info] no need to send, split key not found: [regionId: 6]
+2022/07/28 19:59:07.730435 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:204,d.SizeDiffHint:0,RegionSplitSize:200
+2022/07/28 19:59:07.779933 split_checker.go:45: [info] executing split check worker.Task: [regionId: 6, startKey: 33203030303030303030, endKey: 33203030303030303131]
+2022/07/28 19:59:07.780042 split_checker.go:68: [info] no need to send, split key not found: [regionId: 6]
+2022/07/28 19:59:07.797321 test_test.go:104: [info] partition: [2 5], [1 3 4]
+2022/07/28 19:59:07.830656 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:204,d.SizeDiffHint:0,RegionSplitSize:200
+2022/07/28 19:59:07.837207 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 24 在进行propose Propose No. 68 proposal  Term: 10]
+2022/07/28 19:59:07.839403 log.go:75: [info] [15 d.regionId: 12 entry.Index: 8 entry.Term: 8 在进行process]
+2022/07/28 19:59:07.841690 log.go:75: [info] [24 d.regionId: 1 entry.Index: 67 entry.Term: 10 在进行process]
+2022/07/28 19:59:07.842782 log.go:75: [info] [24 d.regionId: 1 entry.Index: 68 entry.Term: 10 在进行process]
+2022/07/28 19:59:07.842858 peer_msg_handler.go:298: [info] regionID:1 ID: 24 proposals index:68 返回了cb, 类型是Snap
+2022/07/28 19:59:07.842823 log.go:75: [info] [1 d.regionId: 1 entry.Index: 67 entry.Term: 10 在进行process]
+2022/07/28 19:59:07.842953 cluster.go:406: [info] new scan 1 00000000-1 00000010
+2022/07/28 19:59:07.843013 cluster.go:394: [info] new scan request 1 00000000-1 00000010
+2022/07/28 19:59:07.843068 log.go:75: [info] [d.regionId: 12 d.peer.PeerId(): 16 在进行propose Propose No. 9 proposal  Term: 8]
+2022/07/28 19:59:07.843908 log.go:75: [info] [1 d.regionId: 1 entry.Index: 68 entry.Term: 10 在进行process]
+2022/07/28 19:59:07.880008 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:07.880102 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:07.880115 split_checker.go:45: [info] executing split check worker.Task: [regionId: 6, startKey: 33203030303030303030, endKey: 33203030303030303131]
+2022/07/28 19:59:07.880130 split_checker.go:68: [info] no need to send, split key not found: [regionId: 6]
+2022/07/28 19:59:07.881651 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 24 在进行proposeConfChange Propose No. 69 proposal  Term: 10]
+2022/07/28 19:59:07.887303 log.go:75: [info] [24 d.regionId: 1 entry.Index: 69 entry.Term: 10 在进行process]
+2022/07/28 19:59:07.887373 peer_msg_handler.go:166: [info] regionID:1 ID: 24 proposals index:69 返回了cb, 类型是ChangePeer
+2022/07/28 19:59:07.930867 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:204,d.SizeDiffHint:0,RegionSplitSize:200
+2022/07/28 19:59:07.930997 peer.go:51: [info] [region 1] replicates peer with ID 25
+2022/07/28 19:59:07.933537 peer_storage.go:182: [info] [region 1] 24 requesting snapshot
+2022/07/28 19:59:07.933987 snap.go:549: [info] region 1 scan snapshot /tmp/test-raftstore3874592904/snap/gen_1_10_69_(default|write|lock).sst, key count 11, size 275
+2022/07/28 19:59:07.934874 log.go:75: [info] [1 d.regionId: 1 entry.Index: 69 entry.Term: 10 在进行process]
+2022/07/28 19:59:07.980070 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:07.980139 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:08.031263 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:204,d.SizeDiffHint:0,RegionSplitSize:200
+2022/07/28 19:59:08.042481 peer_storage.go:339: [info] [region 1] 25 begin to apply snapshot
+2022/07/28 19:59:08.042521 region_task.go:93: [info] begin apply snap data. [regionId: 1]
+2022/07/28 19:59:08.043911 region_task.go:138: [info] succeed in deleting data in range. [regionId: 1, startKey: , endKey: ]
+2022/07/28 19:59:08.069352 snap.go:700: [info] apply snapshot ingested 1 tables
+2022/07/28 19:59:08.069390 region_task.go:118: [info] applying new data. [regionId: 1, timeTakes: 25.3879ms]
+2022/07/28 19:59:08.069413 peer_storage.go:372: [info] [region 1] 25 完成了ApplySnapshot
+2022/07/28 19:59:08.079983 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:08.080076 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:08.130919 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:204,d.SizeDiffHint:0,RegionSplitSize:200
+2022/07/28 19:59:08.179915 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:08.180005 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:08.230616 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:204,d.SizeDiffHint:0,RegionSplitSize:200
+2022/07/28 19:59:08.280440 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:08.280587 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:08.331092 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:204,d.SizeDiffHint:0,RegionSplitSize:200
+2022/07/28 19:59:08.379920 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:08.380022 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:08.390435 test_test.go:104: [info] partition: [1 3 5], [2 4]
+2022/07/28 19:59:08.431058 peer_msg_handler.go:1053: [info] 我在这里退出了,d.ApproximateSize:204,d.SizeDiffHint:0,RegionSplitSize:200
+2022/07/28 19:59:08.435068 log.go:75: [info] [5 d.regionId: 1 entry.Index: 67 entry.Term: 10 在进行process]
+2022/07/28 19:59:08.436059 log.go:75: [info] [5 d.regionId: 1 entry.Index: 68 entry.Term: 10 在进行process]
+2022/07/28 19:59:08.437280 log.go:75: [info] [5 d.regionId: 1 entry.Index: 69 entry.Term: 10 在进行process]
+2022/07/28 19:59:08.480005 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:08.480130 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:08.579880 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:08.579971 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:08.679877 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:08.679956 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:08.779879 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:08.780028 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:08.879965 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:08.880101 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:08.979932 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:08.980046 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:09.079929 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:09.080022 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:09.083532 test_test.go:104: [info] partition: [], [1 2 3 4 5]
+2022/07/28 19:59:09.179979 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:09.180056 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:09.280068 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:09.280177 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:09.380024 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:09.380111 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:09.479988 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:09.480094 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:09.580079 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:09.580186 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:09.679940 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:09.680076 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:09.737220 log.go:75: [info] [d.regionId: 1 d.peer.PeerId(): 24 在进行propose Propose No. 70 proposal  Term: 10]
+2022/07/28 19:59:09.739712 test_test.go:104: [info] partition: [1 3], [2 4 5]
+2022/07/28 19:59:09.779938 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:09.780012 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:09.879961 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:09.880128 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:09.979995 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:09.980228 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:10.080066 split_checker.go:45: [info] executing split check worker.Task: [regionId: 1, startKey: , endKey: 31203030303030303033]
+2022/07/28 19:59:10.080166 split_checker.go:68: [info] no need to send, split key not found: [regionId: 1]
+2022/07/28 19:59:10.087337 log.go:75: [info] [8 d.regionId: 6 entry.Index: 26 entry.Term: 8 在进行process]
+2022/07/28 19:59:10.134258 log.go:75: [info] [d.regionId: 12 d.peer.PeerId(): 16 在进行propose Propose No. 11 proposal  Term: 11]
+2022/07/28 19:59:10.134301 log.go:75: [info] [d.regionId: 12 d.peer.PeerId(): 16 在进行propose Propose No. 12 proposal  Term: 11]
+2022/07/28 19:59:10.142089 log.go:75: [info] [16 d.regionId: 12 entry.Index: 9 entry.Term: 8 在进行process]
+2022/07/28 19:59:10.142124 peer_msg_handler.go:298: [info] regionID:12 ID: 16 proposals index:9 返回了cb, 类型是Snap
+2022/07/28 19:59:10.143113 log.go:75: [info] [16 d.regionId: 12 entry.Index: 10 entry.Term: 11 在进行process]
+2022/07/28 19:59:10.143164 log.go:75: [info] [17 d.regionId: 12 entry.Index: 9 entry.Term: 8 在进行process]
+2022/07/28 19:59:10.143165 log.go:75: [info] [14 d.regionId: 12 entry.Index: 9 entry.Term: 8 在进行process]
+2022/07/28 19:59:10.144240 log.go:75: [info] [17 d.regionId: 12 entry.Index: 10 entry.Term: 11 在进行process]
+2022/07/28 19:59:10.144218 log.go:75: [info] [16 d.regionId: 12 entry.Index: 11 entry.Term: 11 在进行process]
+2022/07/28 19:59:10.144296 peer_msg_handler.go:298: [info] regionID:12 ID: 16 proposals index:11 返回了cb, 类型是Snap
+2022/07/28 19:59:10.144252 log.go:75: [info] [14 d.regionId: 12 entry.Index: 10 entry.Term: 11 在进行process]
+2022/07/28 19:59:10.144457 cluster.go:406: [info] new scan 2 00000000-2 00000005
+2022/07/28 19:59:10.144546 test_test.go:222: [fatal] get wrong value, client 2
+want:x 2 0 yx 2 1 yx 2 2 yx 2 3 yx 2 4 y
+got: 
+exit status 255
+FAIL	github.com/pingcap-incubator/tinykv/kv/test_raftstore	7.089s
